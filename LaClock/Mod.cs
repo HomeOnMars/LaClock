@@ -3,6 +3,7 @@ using Colossal.Logging;
 using Game;
 using Game.Modding;
 using Game.SceneFlow;
+using System;
 
 namespace LaClock
 {
@@ -35,5 +36,10 @@ namespace LaClock
                 m_Setting = null;
             }
         }
+
+
+        // Check out the following references
+        // https://learn.microsoft.com/en-us/dotnet/api/system.datetime.now?view=net-9.0#system-datetime-now
+
     }
 }
