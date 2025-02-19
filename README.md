@@ -1,6 +1,9 @@
-# LaClock
+LaClock
+===============================================================================
 
-> If you want something done right, you have to do it yourself.
+> "If you want something done right, you have to do it yourself."
+
+-------------------------------------------------------------------------------
 
 Welcome to an experimental mod for Cities: Skylines II,
 where I try to write a mod to put a clock in the game,
