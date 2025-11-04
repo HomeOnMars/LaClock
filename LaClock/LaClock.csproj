@@ -2,11 +2,17 @@
 
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-		<TargetFramework>net472</TargetFramework>
 		<Configurations>Debug;Release</Configurations>
 		
 		<!--The file where mod information which is required for publishing mod on PDX mods are stored-->
 		<PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Title>La Clock</Title>
+		<Version>0.1.0</Version>
+		<Description>A simple in-game clock displaying the current system time.</Description>
+		<Copyright>Copyright © 2025</Copyright>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <PDXAccountDataPath>D:\Programing\CSL2Modding\_secret_\pdx_account__DELETE_AFTER_USE.txt</PDXAccountDataPath>
 	</PropertyGroup>
 	
 	<!--Imports must be after PropertyGroup block-->
@@ -70,6 +76,11 @@
 	<ItemGroup>
 		<None Include="$(ModPropsFile)" Link="Properties\Mod.props" />
 		<None Include="$(ModTargetsFile)" Link="Properties\Mod.targets" />
+		<None Include="ModAssemblyInfo\ModAssemblyInfo.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="CitiesSkylinesModding.UrbanDevKit" Version="0.1.2" />
 	</ItemGroup>
 
 </Project>

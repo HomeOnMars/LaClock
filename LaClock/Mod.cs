@@ -10,7 +10,7 @@ namespace LaClock
     public class Mod : IMod
     {
         public static ILog log = LogManager.GetLogger($"{nameof(LaClock)}.{nameof(Mod)}").SetShowsErrorsInUI(false);
-        private Setting m_Setting;
+        private ModSettings m_Setting;
 
         public void OnLoad(UpdateSystem updateSystem)
         {
@@ -19,12 +19,12 @@ namespace LaClock
             if (GameManager.instance.modManager.TryGetExecutableAsset(this, out var asset))
                 log.Info($"Current mod asset at {asset.path}");
 
-            m_Setting = new Setting(this);
+            m_Setting = new ModSettings(this);
             m_Setting.RegisterInOptionsUI();
             GameManager.instance.localizationManager.AddSource("en-US", new LocaleEN(m_Setting));
 
 
-            AssetDatabase.global.LoadSettings(nameof(LaClock), m_Setting, new Setting(this));
+            AssetDatabase.global.LoadSettings(nameof(LaClock), m_Setting, new ModSettings(this));
         }
 
         public void OnDispose()
