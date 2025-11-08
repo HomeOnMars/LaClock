@@ -13,6 +13,7 @@
 		<Copyright>Copyright © 2025</Copyright>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <PDXAccountDataPath>D:\Programing\CSL2Modding\_secret_\pdx_account__DELETE_AFTER_USE.txt</PDXAccountDataPath>
+    <DefaultItemExcludes>UI\node_modules\**;$(DefaultItemExcludes)</DefaultItemExcludes>
 	</PropertyGroup>
 	
 	<!--Imports must be after PropertyGroup block-->
@@ -83,4 +84,14 @@
 	  <PackageReference Include="CitiesSkylinesModding.UrbanDevKit" Version="0.1.2" />
 	</ItemGroup>
 
+  <!-- Automatically build mod.json file. -->
+  <Import Project="UI\mod.json.csproj" />
+  <ItemGroup>
+    <None Include="UI\mod.json.csproj" />
+  </ItemGroup>
+  <!-- Automatically build the UI with the project. -->
+  <Target Name="BuildUI" AfterTargets="AfterBuild">
+    <Exec Command="npm run build" WorkingDirectory="$(ProjectDir)/UI" />
+  </Target>
+ 
 </Project>
