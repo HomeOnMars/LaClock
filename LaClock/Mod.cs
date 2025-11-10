@@ -9,6 +9,8 @@ namespace LaClock
 {
     public class Mod : IMod
     {
+        internal const string ID = nameof(LaClock);
+
         public static ILog log = LogManager.GetLogger($"{nameof(LaClock)}.{nameof(Mod)}").SetShowsErrorsInUI(false);
         private ModSettings m_Setting;
 
@@ -25,6 +27,8 @@ namespace LaClock
 
 
             AssetDatabase.global.LoadSettings(nameof(LaClock), m_Setting, new ModSettings(this));
+
+            updateSystem.UpdateAt<UISystem>(SystemUpdatePhase.UIUpdate);
         }
 
         public void OnDispose()
