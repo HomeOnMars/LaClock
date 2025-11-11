@@ -7,9 +7,9 @@
 		<!--The file where mod information which is required for publishing mod on PDX mods are stored-->
 		<PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
 		<PackageId>$(AssemblyName)</PackageId>
-		<Title>La Clock</Title>
-		<Version>0.1.0</Version>
-		<Description>A simple in-game clock displaying the current system time.</Description>
+		<Title>La Clock: Show System Time</Title>
+		<Version>1.0.0</Version>
+		<Description>Display current system time in CSL2 toolbar.</Description>
 		<Copyright>Copyright © 2025</Copyright>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <PDXAccountDataPath>D:\Programing\CSL2Modding\_secret_\pdx_account__DELETE_AFTER_USE.txt</PDXAccountDataPath>

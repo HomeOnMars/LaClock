@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { ModuleRegistryExtend } from "cs2/modding";
 import { bindValue, useValue } from "cs2/api";
 import mod from "../../mod.json"
@@ -7,7 +6,7 @@ export const LaClockComponent: ModuleRegistryExtend = (Component) => {
     // This is a void component that does not output anynthing.
     // Cities: Skylines 2 UI is built with React and mods support outputting standard
     // React JSX elements!
-    console.log(`Hello UI from ${mod.id}!`);
+    //console.log(`Hello UI from ${mod.id}!`);
 
     const currentSystemTimeBinding = bindValue<string>(mod.id, "CurrentSystemTime", "Error")
 
