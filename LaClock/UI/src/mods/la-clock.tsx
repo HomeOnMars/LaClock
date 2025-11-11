@@ -17,7 +17,7 @@ export const LaClockComponent: ModuleRegistryExtend = (Component) => {
 
         return (
             <>
-                <div className={"field_eKJ"} style={{ width: "120rem" }}>
+                <div className={"field_eKJ"}>
                     <div className={"container_kOI container_MC3"}>
                         <div className={"label_qsp label_mWz content_syM"}>
                             {currentSystemTimeValue}

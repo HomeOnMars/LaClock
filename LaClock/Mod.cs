@@ -12,7 +12,7 @@ namespace LaClock
         internal const string ID = nameof(LaClock);
 
         public static ILog log = LogManager.GetLogger($"{nameof(LaClock)}.{nameof(Mod)}").SetShowsErrorsInUI(false);
-        private ModSettings m_Setting;
+        internal static ModSettings m_Setting;
 
         public void OnLoad(UpdateSystem updateSystem)
         {

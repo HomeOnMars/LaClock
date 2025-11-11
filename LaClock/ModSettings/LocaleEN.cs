@@ -19,33 +19,23 @@ namespace LaClock
                 { m_Setting.GetSettingsLocaleID(), "La Clock" },
                 { m_Setting.GetOptionTabLocaleID(ModSettings.kSection), "Main" },
 
-                { m_Setting.GetOptionGroupLocaleID(ModSettings.kButtonGroup), "Buttons" },
-                { m_Setting.GetOptionGroupLocaleID(ModSettings.kToggleGroup), "Toggle" },
-                { m_Setting.GetOptionGroupLocaleID(ModSettings.kSliderGroup), "Sliders" },
-                { m_Setting.GetOptionGroupLocaleID(ModSettings.kDropdownGroup), "Dropdowns" },
+                { m_Setting.GetOptionGroupLocaleID(ModSettings.kFormatGroup), "Formatting" },
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.Button)), "Button" },
-                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.Button)), $"Simple single button. It should be bool property with only setter or use [{nameof(SettingsUIButtonAttribute)}] to make button from bool property with setter and getter" },
+                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockFormatString)), "Clock Formatting" },
+                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockFormatString)), @$"Display Format of the Clock.
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ButtonWithConfirmation)), "Button with confirmation" },
-                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ButtonWithConfirmation)), $"Button can show confirmation message. Use [{nameof(SettingsUIConfirmationAttribute)}]" },
-                { m_Setting.GetOptionWarningLocaleID(nameof(ModSettings.ButtonWithConfirmation)), "is it confirmation text which you want to show here?" },
+Examples:
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.Toggle)), "Toggle" },
-                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.Toggle)), $"Use bool property with setter and getter to get toggable option" },
+- **t** | (Default) Your local cultural time format (short ver, without seconds)
+- **T** | Your local time format (long ver, with seconds)
+- **f** | Your local time format (short full ver, without seconds but with dates)
+- **HH:mm** | like 23:45
+- **hh:mm tt**  | like 11:45 PM
+- **HH:mm | ddd dd MMM**    | like 23:45 | Sat 01 Nov
+- **yyyy-MM-dd hh:mm tt**   | like 2025-09-01 11:45 PM
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.IntSlider)), "Int slider" },
-                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.IntSlider)), $"Use int property with getter and setter and [{nameof(SettingsUISliderAttribute)}] to get int slider" },
-
-                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.IntDropdown)), "Int dropdown" },
-                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.IntDropdown)), $"Use int property with getter and setter and [{nameof(SettingsUIDropdownAttribute)}(typeof(SomeType), nameof(SomeMethod))] to get int dropdown: Method must be static or instance of your setting class with 0 parameters and returns {typeof(DropdownItem<int>).Name}" },
-
-                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.EnumDropdown)), "Simple enum dropdown" },
-                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.EnumDropdown)), $"Use any enum property with getter and setter to get enum dropdown" },
-
-                { m_Setting.GetEnumValueLocaleID(ModSettings.SomeEnum.Value1), "Value 1" },
-                { m_Setting.GetEnumValueLocaleID(ModSettings.SomeEnum.Value2), "Value 2" },
-                { m_Setting.GetEnumValueLocaleID(ModSettings.SomeEnum.Value3), "Value 3" },
+For more information, google ""C# Custom date and time format strings"", or see <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>.
+" },
 
             };
         }

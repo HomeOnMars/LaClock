@@ -11,11 +11,18 @@ namespace LaClock
 {
     public partial class UISystem: UISystemBase
     {
+        // See <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
+        // and <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
         protected static string CurrentSystemTime()
         {
-            // See <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
-            // and <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
-            return DateTime.Now.ToString("t");
+            try
+            {
+                return DateTime.Now.ToString(Mod.m_Setting.ClockFormatString);
+            }
+            catch (FormatException)
+            {
+                return "Invalid Formatting";
+            }
         }
 
         protected override void OnCreate()
