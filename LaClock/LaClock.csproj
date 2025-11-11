@@ -8,7 +8,7 @@
 		<PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
 		<PackageId>$(AssemblyName)</PackageId>
 		<Title>La Clock: Show System Time</Title>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<Description>Display current system time in CSL2 toolbar.</Description>
 		<Copyright>Copyright © 2025</Copyright>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
@@ -78,10 +78,6 @@
 		<None Include="$(ModPropsFile)" Link="Properties\Mod.props" />
 		<None Include="$(ModTargetsFile)" Link="Properties\Mod.targets" />
 		<None Include="ModAssemblyInfo\ModAssemblyInfo.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="CitiesSkylinesModding.UrbanDevKit" Version="0.1.2" />
 	</ItemGroup>
 
   <!-- Automatically build mod.json file. -->
