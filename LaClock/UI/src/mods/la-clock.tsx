@@ -1,5 +1,6 @@
 import { ModuleRegistryExtend } from "cs2/modding";
 import { bindValue, useValue } from "cs2/api";
+import { FormattedText, MarkdownRenderer } from "cs2/ui";
 import mod from "../../mod.json"
 
 export const LaClockComponent: ModuleRegistryExtend = (Component) => {
@@ -9,17 +10,18 @@ export const LaClockComponent: ModuleRegistryExtend = (Component) => {
     //console.log(`Hello UI from ${mod.id}!`);
 
     const currentSystemTimeBinding = bindValue<string>(mod.id, "CurrentSystemTime", "Error")
+    let textRenderer = new MarkdownRenderer();
 
     return (props) => {
         const { children, ...otherProps } = props || {};
-        const currentSystemTimeValue = useValue(currentSystemTimeBinding)
+        const currentSystemTimeValue = useValue(currentSystemTimeBinding);
 
         return (
             <>
                 <div className={"field_eKJ"}>
                     <div className={"container_kOI container_MC3"}>
                         <div className={"label_qsp label_mWz content_syM"}>
-                            {currentSystemTimeValue}
+                            {FormattedText({ text: currentSystemTimeValue, renderer: textRenderer })}
                         </div>
                     </div>
                 </div>

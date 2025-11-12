@@ -7,8 +7,8 @@
 		<!--The file where mod information which is required for publishing mod on PDX mods are stored-->
 		<PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
 		<PackageId>$(AssemblyName)</PackageId>
-		<Title>La Clock: Show System Time</Title>
-		<Version>1.0.1</Version>
+		<Title>La Clock (Show System Time)</Title>
+		<Version>1.0.2</Version>
 		<Description>Display current system time in CSL2 toolbar.</Description>
 		<Copyright>Copyright © 2025</Copyright>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>

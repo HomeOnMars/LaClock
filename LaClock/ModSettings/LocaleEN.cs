@@ -28,13 +28,17 @@ Examples:
 
 - **t** | (Default) Your local time format (short ver, without seconds)
 - **T** | Your local time format (long ver, with seconds)
-- **f** | Your local time format (short full ver, without seconds but with dates)
-- **HH:mm**     | like 23:45
-- **hh:mm tt**  | like 11:45 PM
-- **HH:mm | ddd dd MMM**        | like 23:45 | Sat 01 Nov
-- **yyyy-MM-dd hh:mm:ss tt**    | like 2025-09-01 11:45:02 PM
+- **g** | Your local time format (short general ver, without seconds but with dates)
+- **HH:mm**     | like <23:45>
+- **hh:mm tt**  | like <11:45 PM>
+- **\*\*HH:mm\*\* | ddd dd MMM**  | like <**23:45** \| Sat 01 Nov>
+- **yyyy-MM-dd hh:mm:ss tt**    | like <2025-09-01 11:45:02 PM>
+- For more information, search online for ""C# date and time format strings""
 
-For more information, google ""C# Custom date and time format strings"", or see <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>.
+(Advanced) You can also:
+
+- Surround parts with double asterisks to make them **\*\*bold\*\***
+- \#\#\#\# Add 1 to 4 hashtags at the very beginning to enlarge the text
 " },
 
             };
