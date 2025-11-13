@@ -14,7 +14,7 @@
 
 - Toolbar clock displaying system time
 - Customizable display format
-- Option to making the clock blink every hour
+- Option to making the clock blink every hour (require enabling in the settings)
 
 ### Motivation
 
@@ -43,24 +43,19 @@ which is of much inspirations for this project.
 	<Screenshot Value="Properties/Screenshots/Screenshot00.m.jpg" />
   <Screenshot Value="Properties/Screenshots/Screenshot01.m.jpg" />
   <Screenshot Value="Properties/Screenshots/Screenshot02.m.jpg" />
-  <Screenshot Value="Properties/Screenshots/Logo.jpg" />
 	<!--Tag, can be set multiple times-->
 	<Tag Value="" />
 	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="https://forum.paradoxplaza.com/forum/threads/la-clock.1871757/" />
 	<!--Version of the mod-->
-	<ModVersion Value="1.1.0" />
+	<ModVersion Value="1.1.1" />
 	<!--Recommended version of the base game to use the mod-->
 	<GameVersion Value="1.3.*" />
 	<!--Dependency for the mod, can be set multiple times-->
 	<Dependency Id="" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
 	<ChangeLog>
-- Add optional blinking of the clock every hour (or under other pre-defined conditions).
-- Allow minimal markdown syntax in Clock Formatting (now you can add bold text or increase text size by making it headings).
-- Various text clarifications.
-- Renamed mod from "La Clock: Show System Time" to "La Clock (Show System Time)" to make title look better in Skyve.
-- Update thumbnail and screenshot.
+- The optional blinking is now three times as fast and 3s longer, in order to increase noticeability.
   </ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon, buymeacoffee, kofi, crowdin, gitlab-->
 	<ExternalLink Type="github" Url="https://github.com/HomeOnMars/LaClock" />

@@ -43,7 +43,7 @@ Note: You can also surround parts with double asterisks to make them **\*\*bold\
                 { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.EnableBlink)), "Enable blinking when below conditions are met." },
 
                 { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.BlinkCondition)), "Blink when:" },
-                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.BlinkCondition)), "Make the clock blink when the given conditions are met." },
+                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.BlinkCondition)), "How often to make the clock blink?" },
 
                 { m_Setting.GetEnumValueLocaleID(ModSettings.FrictionTriggerEnum.Never), "Never" },
                 { m_Setting.GetEnumValueLocaleID(ModSettings.FrictionTriggerEnum.Per60min), "Every hour" },

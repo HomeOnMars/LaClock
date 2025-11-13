@@ -4,6 +4,10 @@ LaClock
 > "If you want something done right, do it yourself."  
 > \<-- toxic motto that cost me so much time, effort, and unnecessary pain.
 
+> [!WARNING]
+> This repo's alpha branch may contain unstable experimental codes.
+> Commits there may also be combined/deleted without notice.
+
 LaClock Mod Info
 -------------------------------------------------------------------------------
 
@@ -13,7 +17,7 @@ LaClock Mod Info
 
 - Toolbar clock displaying system time
 - Customizable display format
-- Option to making the clock blink every hour
+- Option to making the clock blink every hour (require enabling in the settings)
 
 ### Motivation
 

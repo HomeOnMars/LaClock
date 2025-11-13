@@ -55,8 +55,8 @@ namespace LaClock
             }
 
             var now = DateTime.Now;
-            // Note: Blink duration (12s) must be smaller than a minute
-            if ((now.Hour * 60 + now.Minute) % blinkPerMin != 0 || now.Second >= 12)
+            // Note: Blink duration (15s) must be smaller than a minute
+            if ((now.Hour * 60 + now.Minute) % blinkPerMin != 0 || now.Second >= 15)
             {
                 return false; 
             }
