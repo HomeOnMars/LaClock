@@ -8,7 +8,7 @@
 	<!--Long description of the mod. Single line or multi line. Supports minimal markdown subset-->
 	<!--LongDescription Value="This is a long description" /-->
 	<LongDescription>
-This mod displays the current system time in the toolbar.
+**This mod displays the current system time in the toolbar.**
 
 ### Features
 

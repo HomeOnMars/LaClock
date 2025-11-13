@@ -20,6 +20,7 @@ namespace LaClock
                 { m_Setting.GetOptionTabLocaleID(ModSettings.kSection), "Main" },
 
                 { m_Setting.GetOptionGroupLocaleID(ModSettings.kFormatGroup), "Formatting" },
+                { m_Setting.GetOptionGroupLocaleID(ModSettings.kFrictionGroup), "Friction" },
 
                 { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockFormatString)), "Clock Formatting" },
                 { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockFormatString)), @$"Display Format of the Clock.
@@ -35,11 +36,11 @@ Examples:
 - **yyyy-MM-dd hh:mm:ss tt**    | like <2025-09-01 11:45:02 PM>
 - For more information, search online for ""C# date and time format strings""
 
-(Advanced) You can also:
-
-- Surround parts with double asterisks to make them **\*\*bold\*\***
-- \#\#\#\# Add 1 to 4 hashtags at the very beginning to enlarge the text
+Note: You can also surround parts with double asterisks to make them **\*\*bold\*\***.
 " },
+
+                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.EnableBlink)), "Enable blink" },
+                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.EnableBlink)), "Enable blinking: Clock will blink." },
 
             };
         }

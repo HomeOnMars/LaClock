@@ -85,6 +85,11 @@
   <ItemGroup>
     <None Include="UI\mod.json.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="UI\src\mods\la_clock.module.scss">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <!-- Automatically build the UI with the project. -->
   <Target Name="BuildUI" AfterTargets="AfterBuild">
     <Exec Command="npm run build" WorkingDirectory="$(ProjectDir)/UI" />

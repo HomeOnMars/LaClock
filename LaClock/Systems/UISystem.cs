@@ -25,12 +25,18 @@ namespace LaClock
             }
         }
 
+        protected static bool DoBlink()
+        {
+            return Mod.m_Setting.EnableBlink;
+        }
+
         protected override void OnCreate()
         {
             base.OnCreate();
 
             AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "CurrentSystemTime", CurrentSystemTime));
-            Mod.log.Info(CurrentSystemTime());
+            AddUpdateBinding(new GetterValueBinding<bool>(Mod.ID, "DoBlink", DoBlink));
+            Mod.log.Info($"{nameof(CurrentSystemTime)}: {CurrentSystemTime()}");
         }
 
 

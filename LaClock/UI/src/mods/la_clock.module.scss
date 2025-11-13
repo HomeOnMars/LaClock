@@ -1,0 +1,21 @@
+﻿
+// From blink_HHL
+@keyframes blink-animation {
+    to {
+        background-color: #52b100;
+        box-shadow: 0 0 1rem 1rem #76ff00
+    }
+
+    from {
+        box-shadow: 0 0 1rem 1rem rgba(118, 255, 0, .2)
+    }
+}
+
+// From .button_iQJ.animate_fHa in index.css
+.blink {
+    animation-name: blink-animation;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out
+}

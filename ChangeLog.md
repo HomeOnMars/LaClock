@@ -4,11 +4,11 @@ ChangeLog
 LaClock ChangeLog
 -------------------------------------------------------------------------------
 
-### v1.0.2 <-- v1.0.1 | `2025-11-1?`
+### v1.0.2 <-- v1.0.1 | `2025-11-??` 
 
 - Allow minimal markdown syntax in Clock Formatting
   (now you can add bold text or increase text size by making it headings).
-- Clarifications.
+- Various text clarifications.
 
 -------------------------------------------------------------------------------
 

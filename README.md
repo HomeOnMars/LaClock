@@ -7,7 +7,7 @@ LaClock
 LaClock Mod Info
 -------------------------------------------------------------------------------
 
-This mod displays the current system time in the toolbar.
+**This mod displays the current system time in the toolbar.**
 
 ### Features
 
