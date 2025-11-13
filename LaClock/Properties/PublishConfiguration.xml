@@ -14,6 +14,7 @@
 
 - Toolbar clock displaying system time
 - Customizable display format
+- Option to making the clock blink every hour
 
 ### Motivation
 
@@ -25,7 +26,7 @@ which is also my first C#/React/TypeScript project.
 
 Enjoy!
 
-(Remember, as a general precaution when using mods, always **backup your saves**.)
+(As a general precaution when using mods, remember to **always backup your saves**.)
 
 ### Acknowledgements
 
@@ -48,16 +49,18 @@ which is of much inspirations for this project.
 	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="https://forum.paradoxplaza.com/forum/threads/la-clock.1871757/" />
 	<!--Version of the mod-->
-	<ModVersion Value="1.0.2" />
+	<ModVersion Value="1.1.0" />
 	<!--Recommended version of the base game to use the mod-->
 	<GameVersion Value="1.3.*" />
 	<!--Dependency for the mod, can be set multiple times-->
 	<Dependency Id="" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
 	<ChangeLog>
-- Remove unnecessary UrbanDevKit dependency.
-- Minor clarifications on wording.
-- Minor update of the thumbnail.
+- Add optional blinking of the clock every hour (or under other pre-defined conditions).
+- Allow minimal markdown syntax in Clock Formatting (now you can add bold text or increase text size by making it headings).
+- Various text clarifications.
+- Renamed mod from "La Clock: Show System Time" to "La Clock (Show System Time)" to make title look better in Skyve.
+- Update thumbnail and screenshot.
   </ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon, buymeacoffee, kofi, crowdin, gitlab-->
 	<ExternalLink Type="github" Url="https://github.com/HomeOnMars/LaClock" />

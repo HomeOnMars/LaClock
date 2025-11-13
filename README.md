@@ -13,6 +13,7 @@ LaClock Mod Info
 
 - Toolbar clock displaying system time
 - Customizable display format
+- Option to making the clock blink every hour
 
 ### Motivation
 
@@ -24,7 +25,7 @@ which is also my first C#/React/TypeScript project.
 
 Enjoy!
 
-(Remember, as a general precaution when using mods, always **backup your saves**.)
+(As a general precaution when using mods, remember to **always backup your saves**.)
 
 ### Acknowledgements
 

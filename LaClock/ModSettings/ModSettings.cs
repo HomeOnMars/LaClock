@@ -32,11 +32,27 @@ namespace LaClock
         [SettingsUISection(kSection, kFrictionGroup)]
         public bool EnableBlink { get; set; } = false;
 
+        [SettingsUISection(kSection, kFrictionGroup)]
+        [SettingsUIDisableByCondition(typeof(ModSettings), nameof(EnableBlink), invert: true)]
+        public FrictionTriggerEnum BlinkCondition { get; set; } = FrictionTriggerEnum.Per60min;
+
+
+
+
         public override void SetDefaults()
         {
             throw new System.NotImplementedException();
         }
 
+
+        public enum FrictionTriggerEnum
+        {
+            Never,
+            Per60min,
+            Per30min,
+            Per1min,
+            Always,
+        }
     }
 
 }
