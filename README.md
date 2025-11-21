@@ -8,6 +8,8 @@ LaClock
 > This repo's alpha branch may contain unstable experimental codes.
 > Commits there may also be combined/deleted without notice.
 
+LaClock [Paradox Mod Link](https://mods.paradoxplaza.com/mods/124553/Windows).
+
 LaClock Mod Info
 -------------------------------------------------------------------------------
 
@@ -24,6 +26,7 @@ LaClock Mod Info
 Since the wonderful [System Clock Mod](https://mods.paradoxplaza.com/mods/107257/Windows)
 hasn't yet been updated for 1.3.6f1,
 I figured maybe I can put together a replacement so I don't lose track of time ever so often.
+(I have rewritten the codebase to learn about CSL2 modding.)
 So, welcome to my first experimental mod for Cities: Skylines II,
 which is also my first C#/React/TypeScript project.
 
@@ -48,4 +51,3 @@ See below for some resources that I found helpful for this mod or starting moddi
 - [Cities Skylines Modding Discord](https://discord.gg/HTav7ARPs2)
 - [CSL2 Modding Instructions](https://github.com/rcav8tr/CS2-Modding-Instructions)
 - [CSL2 Modding Wiki](https://cs2.paradoxwikis.com/Modding)
-- [SystemClockMod](https://github.com/liberaldev/SystemClockMod)
