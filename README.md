@@ -48,4 +48,3 @@ See below for some resources that I found helpful for this mod or starting moddi
 - [Cities Skylines Modding Discord](https://discord.gg/HTav7ARPs2)
 - [CSL2 Modding Instructions](https://github.com/rcav8tr/CS2-Modding-Instructions)
 - [CSL2 Modding Wiki](https://cs2.paradoxwikis.com/Modding)
-- [SystemClockMod](https://github.com/liberaldev/SystemClockMod)
