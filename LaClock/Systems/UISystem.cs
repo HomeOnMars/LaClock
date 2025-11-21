@@ -27,36 +27,12 @@ namespace LaClock
 
         protected static bool DoBlink()
         {
-            if (!Mod.m_Setting.EnableBlink)
-            {
-                return false;
-            }
-
-            uint blinkPerMin;
-            switch (Mod.m_Setting.BlinkCondition)
-            {
-                case ModSettings.FrictionTriggerEnum.Never:
-                    return false;
-                case ModSettings.FrictionTriggerEnum.Always:
-                    return true;
-                case ModSettings.FrictionTriggerEnum.Per60min:
-                    blinkPerMin = 60;
-                    break;
-                case ModSettings.FrictionTriggerEnum.Per30min:
-                    blinkPerMin = 30;
-                    break;
-                case ModSettings.FrictionTriggerEnum.Per1min:
-                    blinkPerMin = 1;
-                    break;
-
-                default:
-                    Mod.log.Error($"Unknown BlinkCondition: {Mod.m_Setting.BlinkCondition}. Please Contact Mod Creator.");
-                    return true;    // prompt user to investigate
-            }
+            if (!Mod.m_Setting.EnableBlink || Mod.m_Setting.BlinkPerMin == 0) { return false; }
+            if (Mod.m_Setting.BlinkPerMin < 0) { return true; }
 
             var now = DateTime.Now;
             // Note: Blink duration (15s) must be smaller than a minute
-            if ((now.Hour * 60 + now.Minute) % blinkPerMin != 0 || now.Second >= 15)
+            if ((now.Hour * 60 + now.Minute) % Mod.m_Setting.BlinkPerMin != 0 || now.Second >= Mod.m_Setting.BlinkDurationSec)
             {
                 return false; 
             }

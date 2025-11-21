@@ -4,6 +4,20 @@ ChangeLog
 LaClock ChangeLog
 -------------------------------------------------------------------------------
 
+### v1.1.2 <-- v1.1.1 | `2025-11-21`
+
+- Update for game v1.4.2f1.
+- Update Settings:
+  - Add pre-configured clock formatting options
+    (thanks @ddsmillenium for the suggestion).
+  - Add settings option for blink duration (default changed back to 12s).
+  - Changed Blink Frequency from enum type to int dropdown.
+    (This means that this settings entry has been reset to 'every hour'.
+    If you are using the clock blinking feature,
+    you may need to set this settings again. Sorry!)
+
+-------------------------------------------------------------------------------
+
 ### v1.1.1 <-- v1.1.0 | `2025-11-15`
 
 - The optional blinking is now three times as fast and 3s longer,

@@ -48,14 +48,18 @@ which is of much inspirations for this project.
 	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="https://forum.paradoxplaza.com/forum/threads/la-clock.1871757/" />
 	<!--Version of the mod-->
-	<ModVersion Value="1.1.1" />
+	<ModVersion Value="1.1.2" />
 	<!--Recommended version of the base game to use the mod-->
-	<GameVersion Value="1.3.*" />
+	<GameVersion Value="1.4.2*" />
 	<!--Dependency for the mod, can be set multiple times-->
 	<Dependency Id="" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
 	<ChangeLog>
-- The optional blinking is now three times as fast and 3s longer, in order to increase noticeability.
+- Update for game v1.4.2f1.
+- Update Settings:
+  - Add pre-configured clock formatting options (thanks @ddsmillenium for the suggestion).
+  - Add settings option for blink duration (default changed back to 12s).
+  - Changed Blink Frequency from enum type to int dropdown. (This means that this settings entry has been reset to 'every hour'. If you are using the clock blinking feature,	you may need to set this settings again. Sorry!)
   </ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon, buymeacoffee, kofi, crowdin, gitlab-->
 	<ExternalLink Type="github" Url="https://github.com/HomeOnMars/LaClock" />
