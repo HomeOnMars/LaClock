@@ -1,10 +1,5 @@
-﻿using Colossal.IO.AssetDatabase;
-using Colossal.Logging;
-using Colossal.UI.Binding;
-using Game;
+﻿using Colossal.UI.Binding;
 using Game.UI;
-using Game.Modding;
-using Game.SceneFlow;
 using System;
 
 namespace LaClock

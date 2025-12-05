@@ -8,7 +8,7 @@ LaClock ChangeLog
 
 - Now works in editor as well!
 - Add a few more pre-configured clock formatting options.
-- Change pre-configured formatting options no longer overwrites custom formatting entries.
+- Changing pre-configured formatting options no longer overwrites custom formatting entries.
 - Tidy up the code.
 
 ### v1.1.2 <-- v1.1.1 | `2025-11-21`

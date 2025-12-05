@@ -1,6 +1,4 @@
 ﻿using Colossal;
-using Game.Settings;
-using Game.UI.Widgets;
 using System.Collections.Generic;
 
 namespace LaClock

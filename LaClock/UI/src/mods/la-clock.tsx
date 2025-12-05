@@ -1,4 +1,4 @@
-import { ModuleRegistryAppend, ModuleRegistryExtend } from "cs2/modding";
+import { ModuleRegistryExtend } from "cs2/modding";
 import { bindValue, useValue } from "cs2/api";
 import { FormattedText, MarkdownRenderer } from "cs2/ui";
 import laClockStyles from "./la_clock.module.scss"
