@@ -4,6 +4,13 @@ ChangeLog
 LaClock ChangeLog
 -------------------------------------------------------------------------------
 
+### v1.2.0 <-- v1.1.2 | `2025-12-05`
+
+- Now works in editor as well!
+- Add a few more pre-configured clock formatting options.
+- Change pre-configured formatting options no longer overwrites custom formatting entries.
+- Tidy up the code.
+
 ### v1.1.2 <-- v1.1.1 | `2025-11-21`
 
 - Update for game v1.4.2f1.

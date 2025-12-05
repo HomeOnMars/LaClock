@@ -17,7 +17,7 @@ namespace LaClock
         {
             try
             {
-                return DateTime.Now.ToString(Mod.m_Setting.ClockFormatString);
+                return DateTime.Now.ToString(Mod.m_Setting.ClockFormatStringActual);
             }
             catch (FormatException)
             {

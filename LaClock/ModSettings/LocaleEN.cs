@@ -14,7 +14,7 @@ namespace LaClock
         }
         public IEnumerable<KeyValuePair<string, string>> ReadEntries(IList<IDictionaryEntryError> errors, Dictionary<string, int> indexCounts)
         {
-            return new Dictionary<string, string>
+            var localeEntries = new Dictionary<string, string>
             {
                 { m_Setting.GetSettingsLocaleID(), "La Clock" },
                 { m_Setting.GetOptionTabLocaleID(ModSettings.kSection), "Main" },
@@ -54,14 +54,15 @@ Note: You can also surround parts with double asterisks to make them **\*\*bold\
 
 
                 { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.Custom), "(Custom...)" },
-                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.St), ModSettings.kExampleDateTime.ToString("t") },
-                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.Sts), ModSettings.kExampleDateTime.ToString("T") },
-                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.Sg), ModSettings.kExampleDateTime.ToString("g") },
-                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.Sgs), ModSettings.kExampleDateTime.ToString("G") },
-                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.HoM1), ModSettings.kExampleDateTime.ToString("**HH:mm** | ddd dd MMM") },
-                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.HoM1s), ModSettings.kExampleDateTime.ToString("**HH:mm:ss** | ddd dd MMM") },
-
             };
+
+            // update ClockFormatEnum entries
+            foreach (var entry in ModSettings.kClockFormatEnumToString)
+            {
+                localeEntries[m_Setting.GetEnumValueLocaleID(entry.Key)] = ModSettings.kExampleDateTime.ToString(entry.Value);
+            }
+
+            return localeEntries;
         }
 
         public void Unload()

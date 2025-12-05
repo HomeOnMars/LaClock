@@ -19,7 +19,22 @@ namespace LaClock
         public const string kFormatGroup = "Formatting";
         public const string kFrictionGroup = "Friction";
 
-        public static readonly DateTime kExampleDateTime = new DateTime(2025, 9, 8, 21, 3, 4);
+        public static readonly DateTime kExampleDateTime = new DateTime(2025, 9, 8, 21, 3, 4, DateTimeKind.Local);
+        public static readonly Dictionary<ClockFormatEnum, string> kClockFormatEnumToString = new()
+        {   // https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
+            { ClockFormatEnum.St,  "t"},
+            { ClockFormatEnum.Sts, "T"},
+            { ClockFormatEnum.Sg,  "g"},
+            { ClockFormatEnum.Sgs, "G"},
+            { ClockFormatEnum.Su,  "u"},
+            { ClockFormatEnum.ISO8601syk, "yyyy-MM-ddTHH:mm:ssK"},
+            { ClockFormatEnum.HoM0, "**HH:mm** | ddd | yyyy-MM-dd"},
+            { ClockFormatEnum.HoM0s, "**HH:mm:ss** | ddd | yyyy-MM-dd"},
+            { ClockFormatEnum.HoM1, "**HH:mm** | ddd dd MMM"},
+            { ClockFormatEnum.HoM1s, "**HH:mm:ss** | ddd dd MMM"},
+            { ClockFormatEnum.HoM1y, "**HH:mm** | ddd dd MMM yyyy"},
+            { ClockFormatEnum.HoM1sy, "**HH:mm:ss** | ddd dd MMM yyyy"},
+        };
 
 
         public ModSettings(IMod mod) : base(mod)
@@ -36,41 +51,46 @@ namespace LaClock
             set
             {
                 _clockFormatChoice = value;
-                switch (value)
-                {
-                    case ClockFormatEnum.Custom:
-                        break;
-                    case ClockFormatEnum.St:
-                        ClockFormatString = "t";
-                        break;
-                    case ClockFormatEnum.Sts:
-                        ClockFormatString = "T";
-                        break;
-                    case ClockFormatEnum.Sg:
-                        ClockFormatString = "g";
-                        break;
-                    case ClockFormatEnum.Sgs:
-                        ClockFormatString = "G";
-                        break;
-                    case ClockFormatEnum.HoM1:
-                        ClockFormatString = "**HH:mm** | ddd dd MMM";
-                        break;
-                    case ClockFormatEnum.HoM1s:
-                        ClockFormatString = "**HH:mm:ss** | ddd dd MMM";
-                        break;
-                    default:
-                        ClockFormatString = "Error: Unexpected `ClockFormatChoice` input. Should not have happened.";
-                        break;
-                }
+                UpdateClockFormatStringActual();
             }
         }
 
         public bool ClockFormatChoiceIsCustom() => ClockFormatChoice == ClockFormatEnum.Custom;
 
+        private string _clockFormatString = "t";
         [SettingsUITextInput]
         [SettingsUISection(kSection, kFormatGroup)]
-        [SettingsUIDisableByCondition(typeof(ModSettings), nameof(ClockFormatChoiceIsCustom), invert: true)]
-        public string ClockFormatString { get; set; } = "t";
+        [SettingsUIHideByCondition(typeof(ModSettings), nameof(ClockFormatChoiceIsCustom), invert: true)]
+        public string ClockFormatString
+        {
+            get { return _clockFormatString; }
+            set {
+                _clockFormatString = value;
+                UpdateClockFormatStringActual();
+            }
+        }
+
+        public string ClockFormatStringActual { get; private set; }
+        void UpdateClockFormatStringActual()
+        {
+            switch (_clockFormatChoice)
+            {
+                case ClockFormatEnum.Custom:
+                    ClockFormatStringActual = _clockFormatString;
+                    break;
+                default:
+                    if (kClockFormatEnumToString.TryGetValue(_clockFormatChoice, out var tmpClockFormatString))
+                    {
+                        ClockFormatStringActual = tmpClockFormatString;
+                    }
+                    else
+                    {
+                        ClockFormatStringActual = $"Error: Unexpected `ClockFormatChoice` input '{_clockFormatChoice}'. Should not have happened.";
+                        log.Error(ClockFormatStringActual);
+                    }
+                    break;
+            }
+        }
 
         [SettingsUISection(kSection, kFrictionGroup)]
         public bool EnableBlink { get; set; } = false;
@@ -108,8 +128,14 @@ namespace LaClock
             Sts,
             Sg,
             Sgs,
+            Su,
+            ISO8601syk,
+            HoM0,
+            HoM0s,
             HoM1,
             HoM1s,
+            HoM1y,
+            HoM1sy,
         }
 
         public DropdownItem<int>[] GetBlinkPerMinDropdownItems()

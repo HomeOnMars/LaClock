@@ -10,6 +10,8 @@
 	<LongDescription>
 **This mod displays the current system time in the toolbar.**
 
+Works both in game and in editor.
+
 ### Features
 
 - Toolbar clock displaying system time
@@ -49,15 +51,18 @@ which is of much inspirations for this project.
 	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="https://forum.paradoxplaza.com/forum/threads/la-clock.1871757/" />
 	<!--Version of the mod-->
-	<ModVersion Value="1.1.2" />
+	<ModVersion Value="1.2.0" />
 	<!--Recommended version of the base game to use the mod-->
 	<GameVersion Value="1.5.*" />
 	<!--Dependency for the mod, can be set multiple times-->
 	<Dependency Id="" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
 	<ChangeLog>
-- Version bump for game v1.5.2f1.
-	</ChangeLog>
+- Now works in editor as well!
+- Add a few more pre-configured clock formatting options.
+- Change pre-configured formatting options no longer overwrites custom formatting entries.
+- Tidy up the code.
+  </ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon, buymeacoffee, kofi, crowdin, gitlab-->
 	<ExternalLink Type="github" Url="https://github.com/HomeOnMars/LaClock" />
 </Publish>

@@ -15,6 +15,8 @@ LaClock Mod Info
 
 **This mod displays the current system time in the toolbar.**
 
+Works both in game and in editor.
+
 ### Features
 
 - Toolbar clock displaying system time
