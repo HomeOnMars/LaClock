@@ -1,0 +1,17 @@
+{
+  "Options.SECTION[LaClock.LaClock.Mod]": "La Clock | Системные часы",
+  "Options.TAB[LaClock.LaClock.Mod.Main]": "основные настройки",
+  "Options.GROUP[LaClock.LaClock.Mod.Formatting]": "Формат",
+  "Options.GROUP[LaClock.LaClock.Mod.Friction]": "Трение",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "формат часов",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Пожалуйста, выберите формат часов в раскрывающемся списке",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Формат часов (Настроить...)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Формат отображения часов\n\nПример:\n\n- **t** | (по умолчанию) формат локальных часов (без секунд)\n- **T** | локальный формат часов (включая секунды)\n- **g** | Локальный формат часов (без секунд, включая дату)\n- **HH:mm** | Форма как <23:45>\n- **hh:mm tt** | выглядит как <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | выглядит как <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Форма как <2025-09-01 11:45:02 PM>\n- Для получения дополнительной информации выполните поиск в Интернете по запросу «строка пользовательского формата даты и времени .NET».\n\nПримечание. Добавьте две звездочки до и после части, которую хотите выделить, чтобы эта часть была выделена жирным шрифтом **\\*\\*жирным\\*\\***.",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Включить мигание часов",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Мигайте часы при выполнении следующих условий",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "интервал вспышки часов",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "Как часто прошивать часы",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Продолжительность мигания (секунды)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Сколько секунд длится каждая вспышка?",
+  "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "Настроить…"
+}

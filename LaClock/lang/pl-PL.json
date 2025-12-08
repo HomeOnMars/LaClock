@@ -1,0 +1,17 @@
+{
+  "Options.SECTION[LaClock.LaClock.Mod]": "La Clock | Zegar systemowy",
+  "Options.TAB[LaClock.LaClock.Mod.Main]": "główne ustawienia",
+  "Options.GROUP[LaClock.LaClock.Mod.Formatting]": "Format",
+  "Options.GROUP[LaClock.LaClock.Mod.Friction]": "Tarcie",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "formacie zegara",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Z listy rozwijanej wybierz format zegara",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Format zegara (Dostosuj...)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Format wyświetlania zegara\n\nPrzykład:\n\n- **t** | (domyślny) format zegara lokalnego (bez sekund)\n- **T** | format zegara lokalnego (w tym sekundy)\n- **g** | Format zegara lokalnego (bez sekund, łącznie z datą)\n- **HH:mm** | Kształt jak <23:45>\n- **hh:mm tt** | wygląda na <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | wygląda jak <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Kształt podobny do <2025-09-01 11:45:02 PM>\n- Aby uzyskać więcej informacji, wyszukaj w Internecie „ciąg niestandardowego formatu daty i godziny .NET”.\n\nUwaga: Dodaj dwie gwiazdki przed i po części, którą chcesz wyróżnić, aby ta część została **\\*\\*pogrubiona\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Włącz miganie zegara",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Zabłyśnij zegarem, gdy zostaną spełnione następujące warunki",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "odstęp między błyskami zegara",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "Jak często flashować zegar",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Czas migania (sekundy)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Ile sekund trwa każdy błysk?",
+  "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "Dostosuj…"
+}

@@ -1,0 +1,17 @@
+{
+  "Options.SECTION[LaClock.LaClock.Mod]": "La Clock | Relógio do sistema",
+  "Options.TAB[LaClock.LaClock.Mod.Main]": "configurações principais",
+  "Options.GROUP[LaClock.LaClock.Mod.Formatting]": "Formatar",
+  "Options.GROUP[LaClock.LaClock.Mod.Friction]": "Atrito",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "formato de relógio",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Selecione um formato de relógio na lista suspensa",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato do relógio (personalizado...)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato de exibição do relógio\n\nExemplo:\n\n- **t** | (padrão) formato de relógio local (sem segundos)\n- **T** | formato de relógio local (incluindo segundos)\n- **g** | Formato de relógio local (sem segundos, incluindo data)\n- **HH:mm** | Formato como <23:45>\n- **hh:mm tt** | parece <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | parece <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Formato como <2025-09-01 23:45:02 PM>\n- Para obter mais informações, pesquise na Internet por \"string de formato personalizado de data e hora do .NET\"\n\nNota: Adicione dois asteriscos antes e depois da parte que deseja destacar para torná-la **\\*\\*bold\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Habilitar relógio piscando",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Pisque o relógio quando as seguintes condições forem atendidas",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "intervalo de flash do relógio",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "Com que frequência piscar o relógio",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Duração do piscar (segundos)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Quantos segundos dura cada flash?",
+  "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "Personalizado…"
+}

@@ -1,0 +1,17 @@
+{
+  "Options.SECTION[LaClock.LaClock.Mod]": "La Clock | 系統時鐘",
+  "Options.TAB[LaClock.LaClock.Mod.Main]": "主設置",
+  "Options.GROUP[LaClock.LaClock.Mod.Formatting]": "格式",
+  "Options.GROUP[LaClock.LaClock.Mod.Friction]": "提醒",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "時鐘格式",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "請在下拉清單中選擇一個時鐘格式",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "時鐘格式（自訂……）",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "時鐘顯示格式\n\n示例：\n\n- **t** | （預設）當地時鐘格式（不含秒）\n- **T** | 當地時鐘格式（含秒）\n- **g** | 當地時鐘格式（不含秒，含日期）\n- **HH:mm**     | 形如 <23:45>\n- **hh:mm tt**  | 形如 <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM**  | 形如 <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt**    | 形如 <2025-09-01 11:45:02 PM>\n- 更多資訊請自行上網搜索“.NET自訂日期和時間格式字串”\n\n注：在想要突出的部分前後加兩個星號可以使那一部分**\\*\\*加粗\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "啟用時鐘閃爍",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "在以下條件符合時閃爍時鐘",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "時鐘閃爍間隔",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "每隔多久閃爍一次時鐘",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "閃爍時長（秒）",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "每次閃爍閃爍幾秒？",
+  "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "自訂……"
+}

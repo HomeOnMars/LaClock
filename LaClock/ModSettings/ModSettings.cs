@@ -27,8 +27,10 @@ namespace LaClock
             { ClockFormatEnum.Sgs, "G"},
             { ClockFormatEnum.Su,  "u"},
             { ClockFormatEnum.ISO8601syk, "yyyy-MM-ddTHH:mm:ssK"},
-            { ClockFormatEnum.HoM0, "**HH:mm** | ddd | yyyy-MM-dd"},
-            { ClockFormatEnum.HoM0s, "**HH:mm:ss** | ddd | yyyy-MM-dd"},
+            { ClockFormatEnum.HoM0, "**HH:mm** | ddd"},
+            { ClockFormatEnum.HoM0s, "**HH:mm:ss** | ddd"},
+            { ClockFormatEnum.HoM0y, "**HH:mm** | ddd | yyyy-MM-dd"},
+            { ClockFormatEnum.HoM0sy, "**HH:mm:ss** | ddd | yyyy-MM-dd"},
             { ClockFormatEnum.HoM1, "**HH:mm** | ddd dd MMM"},
             { ClockFormatEnum.HoM1s, "**HH:mm:ss** | ddd dd MMM"},
             { ClockFormatEnum.HoM1y, "**HH:mm** | ddd dd MMM yyyy"},
@@ -131,6 +133,8 @@ namespace LaClock
             ISO8601syk,
             HoM0,
             HoM0s,
+            HoM0y,
+            HoM0sy,
             HoM1,
             HoM1s,
             HoM1y,
@@ -143,9 +147,9 @@ namespace LaClock
             {
                 new() { value =   0, displayName = "Never" },
                 new() { value = 120, displayName = "2 hours" },
-                new() { value =  60, displayName = "hour" },
+                new() { value =  60, displayName = "1 hour" },
                 new() { value =  30, displayName = "30 minutes" },
-                new() { value =   1, displayName = "minute :-p" },
+                new() { value =   1, displayName = "1 minute :-p" },
                 new() { value =  -1, displayName = "Always??" },
             };
             return items.ToArray();

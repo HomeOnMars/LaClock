@@ -1,4 +1,5 @@
 ﻿using Colossal;
+using Colossal.Logging;
 using System.Collections.Generic;
 
 namespace LaClock
@@ -35,7 +36,7 @@ Examples:
 - **hh:mm tt**  | like <11:45 PM>
 - **\*\*HH:mm\*\* | ddd dd MMM**  | like <**23:45** \| Sat 01 Nov>
 - **yyyy-MM-dd hh:mm:ss tt**    | like <2025-09-01 11:45:02 PM>
-- For more information, search online for ""C# date and time format strings""
+- For more information, search online for "".NET Custom date and time format strings""
 
 Note: You can also surround parts with double asterisks to make them **\*\*bold\*\***.
 " },
@@ -51,7 +52,7 @@ Note: You can also surround parts with double asterisks to make them **\*\*bold\
 
 
 
-                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.Custom), "(Custom...)" },
+                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.Custom), "Custom..." },
             };
 
             // update ClockFormatEnum entries
@@ -59,6 +60,8 @@ Note: You can also surround parts with double asterisks to make them **\*\*bold\
             {
                 localeEntries[m_Setting.GetEnumValueLocaleID(entry.Key)] = ModSettings.kExampleDateTime.ToString(entry.Value);
             }
+
+            Mod.log.Info($"{m_Setting.GetOptionGroupLocaleID(ModSettings.kFormatGroup)}");
 
             return localeEntries;
         }

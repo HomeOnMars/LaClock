@@ -16,6 +16,8 @@ LaClock Mod Info
 **This mod displays the current system time in the toolbar.**
 
 Works both in game and in editor.
+Localizations are helped by machine translation,
+and require [I18n Everywhere](https://mods.paradoxplaza.com/mods/75426/Windows) Mod.
 
 ### Features
 
@@ -26,8 +28,8 @@ Works both in game and in editor.
 ### Motivation
 
 Since the wonderful [System Clock Mod](https://mods.paradoxplaza.com/mods/107257/Windows)
-hasn't yet been updated for 1.3.6f1,
-I figured maybe I can put together a replacement so I don't lose track of time ever so often.
+hadn't been updated for about a month when 1.3.6f1 patch dropped,
+I figured maybe I could put together a replacement so I don't lose track of time ever so often.
 (I have rewritten the codebase to learn about CSL2 modding.)
 So, welcome to my first experimental mod for Cities: Skylines II,
 which is also my first C#/React/TypeScript project.

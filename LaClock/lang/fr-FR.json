@@ -1,0 +1,17 @@
+{
+  "Options.SECTION[LaClock.LaClock.Mod]": "La Clock | Horloge système",
+  "Options.TAB[LaClock.LaClock.Mod.Main]": "paramètres principaux",
+  "Options.GROUP[LaClock.LaClock.Mod.Formatting]": "Format",
+  "Options.GROUP[LaClock.LaClock.Mod.Friction]": "Friction",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "format d'horloge",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Veuillez sélectionner un format d'horloge dans la liste déroulante",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Format d'horloge (Personnaliser...)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Format d'affichage de l'horloge\n\nExemple :\n\n- **t** | (par défaut) format d'horloge locale (sans secondes)\n- **T** | format d'horloge locale (y compris les secondes)\n- **g** | Format de l'horloge locale (sans secondes, date incluse)\n- **HH:mm** | Forme comme <23:45>\n- **hh:mm tt** | on dirait <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | ressemble à <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Forme comme <2025-09-01 11:45:02 PM>\n- Pour plus d'informations, veuillez rechercher sur Internet « chaîne de format de date et d'heure personnalisée .NET »\n\nRemarque : Ajoutez deux astérisques avant et après la partie que vous souhaitez mettre en surbrillance pour la rendre **\\*\\*gras\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Activer le clignotement de l'horloge",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Faites clignoter l'horloge lorsque les conditions suivantes sont remplies",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "intervalle de flash de l'horloge",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "À quelle fréquence faire clignoter l'horloge",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Durée de clignotement (secondes)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Combien de secondes dure chaque flash?",
+  "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "Personnaliser…"
+}

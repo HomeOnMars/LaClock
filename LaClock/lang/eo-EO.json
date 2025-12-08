@@ -1,0 +1,17 @@
+{
+  "Options.SECTION[LaClock.LaClock.Mod]": "La Clock | La Horloĝo",
+  "Options.TAB[LaClock.LaClock.Mod.Main]": "Ĉefaj agordoj",
+  "Options.GROUP[LaClock.LaClock.Mod.Formatting]": "Formato",
+  "Options.GROUP[LaClock.LaClock.Mod.Friction]": "Froto",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Formato de horloĝo",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Bonvolu elekti horloĝan formaton en la fallisto",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato de horloĝo (Agordi...)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato de horloĝo\n\nEkzemplo:\n\n- **t** | (defaŭlta) loka horloĝa formato (sen sekundoj)\n- **T** | loka horloĝa formato (inkluzive de sekundoj)\n- **g** | Loka horloĝa formato (sen sekundoj, inkluzive de dato)\n- **HH:mm** | Formu kiel <23:45>\n- **hh:mm tt** | aspektas kiel <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | aspektas kiel <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Formu kiel <2025-09-01 11:45:02 PM>\n- Por pliaj informoj, bonvolu serĉi en la Interreto \".NET-propra data kaj hora formato ĉeno\"\n\nNoto: Aldonu du steletojn antaŭ kaj post la parto, kiun vi volas reliefigi, por fari tiun parton **\\*\\*grasa\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Ebligu horloĝan ekbrilon",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Ekbriligi la horloĝon kiam la sekvaj kondiĉoj estas plenumitaj",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "Horloĝa fulmintervalo",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "Kiom ofte ekbriligi la horloĝon",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Daŭro de ekbrilo (sekundoj)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Kiom da sekundoj daŭras ĉiu ekbrilo?",
+  "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "Agordi..."
+}

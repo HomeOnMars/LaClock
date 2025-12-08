@@ -1,0 +1,17 @@
+{
+  "Options.SECTION[LaClock.LaClock.Mod]": "La Clock | システムクロック",
+  "Options.TAB[LaClock.LaClock.Mod.Main]": "メイン設定",
+  "Options.GROUP[LaClock.LaClock.Mod.Formatting]": "形式",
+  "Options.GROUP[LaClock.LaClock.Mod.Friction]": "思い出させる",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "時計の形式",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "ドロップダウンリストから時計の形式を選択してください",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "時計の形式 (カスタム...)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "時計の表示形式\n\n例:\n\n- **t** | (既定) ローカル クロック形式 (秒を除く)\n- **T** | ローカル クロック形式 (秒を含む)\n- **g** | ローカル クロック形式 (秒を除く、日付を含む)\n- **HH:mm** | <23:45> のような形式\n- **hh:mm tt** | <11:45 PM> のような形式\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | <**23:45** \\| Sat 01 Nov> のような形式\n- **yyyy-MM-dd hh:mm:ss tt** | <2025-09-01 11:45:02 PM> のような形式\n- 詳細については、「.NET カスタム日付および時刻形式文字列」をオンラインで検索してください。\n\n注: 強調表示したい部分の前後にアスタリスクを 2 つ追加すると、その部分が太字になります。",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "時計の点滅を有効にする",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "以下の条件が満たされると時計が点滅します",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "時計の点滅間隔",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "時計はどのくらいの頻度で点滅しますか?",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "点滅時間（秒）",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "1回あたり何秒間点滅しますか?",
+  "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "カスタム..."
+}

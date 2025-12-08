@@ -1,0 +1,17 @@
+{
+  "Options.SECTION[LaClock.LaClock.Mod]": "La Clock | Systemuhr",
+  "Options.TAB[LaClock.LaClock.Mod.Main]": "Haupteinstellungen",
+  "Options.GROUP[LaClock.LaClock.Mod.Formatting]": "Format",
+  "Options.GROUP[LaClock.LaClock.Mod.Friction]": "Reibung",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Uhrformat",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Bitte wählen Sie in der Dropdown-Liste ein Uhrformat aus",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Uhrformat (benutzerdefiniert...)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Anzeigeformat der Uhr\n\nBeispiel:\n\n- **t** | (Standard) lokales Uhrformat (ohne Sekunden)\n- **T** | lokales Uhrformat (einschließlich Sekunden)\n- **g** | Lokales Uhrformat (ohne Sekunden, einschließlich Datum)\n- **HH:mm** | Form wie <23:45>\n- **hh:mm tt** | sieht aus wie <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | sieht aus wie <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Form wie <2025-09-01 11:45:02 PM>\n- Für weitere Informationen suchen Sie bitte im Internet nach „.NET benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge“.\n\nHinweis: Fügen Sie vor und nach dem Teil, den Sie hervorheben möchten, zwei Sternchen hinzu, um diesen Teil **\\*\\*fett\\*\\*** zu machen.",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Aktivieren Sie das Blinken der Uhr",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Blinken Sie die Uhr, wenn die folgenden Bedingungen erfüllt sind",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "Blinkintervall der Uhr",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "Wie oft soll die Uhr blinken?",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Blinkdauer (Sekunden)",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Wie viele Sekunden dauert jeder Blitz?",
+  "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "Benutzerdefiniert..."
+}
