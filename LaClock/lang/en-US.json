@@ -7,7 +7,7 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Pick a format for the clock.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Clock Formatting (Custom...)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Display Format of the Clock.\n\nExamples:\n\n- **HH:mm**     | like <23:45>\n- **hh:mm tt**  | like <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM**  | like <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt**    | like <2025-09-01 11:45:02 PM>\n- For more information, search online for \".NET Custom date and time format strings\"\n\nNote: You can also surround parts with double asterisks to make them **\\*\\*bold\\*\\***.",
-  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Clock Width (in-game)",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Clock Width",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Change the multipler for the clock's width (applies in game only, editor not affected)",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Enable blink",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Enable blinking when below conditions are met.",

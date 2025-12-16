@@ -29,9 +29,6 @@ namespace LaClock
 
 Examples:
 
-- **t** | (Default) Your local time format (short ver, without seconds)
-- **T** | Your local time format (long ver, with seconds)
-- **g** | Your local time format (short general ver, without seconds but with dates)
 - **HH:mm**     | like <23:45>
 - **hh:mm tt**  | like <11:45 PM>
 - **\*\*HH:mm\*\* | ddd dd MMM**  | like <**23:45** \| Sat 01 Nov>
@@ -41,7 +38,7 @@ Examples:
 Note: You can also surround parts with double asterisks to make them **\*\*bold\*\***.
 " },
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockSizeMultiplier)), "Clock Width (in-game)" },
+                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockSizeMultiplier)), "Clock Width" },
                 { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockSizeMultiplier)), "Change the multipler for the clock's width (applies in game only, editor not affected)" },
 
                 { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.EnableBlink)), "Enable blink" },
