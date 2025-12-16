@@ -3,6 +3,7 @@ using Colossal.Logging;
 using Game;
 using Game.Modding;
 using Game.SceneFlow;
+using Game.Settings;
 
 namespace LaClock
 {
@@ -23,7 +24,6 @@ namespace LaClock
             m_Setting = new ModSettings(this);
             m_Setting.RegisterInOptionsUI();
             GameManager.instance.localizationManager.AddSource("en-US", new LocaleEN(m_Setting));
-
 
             AssetDatabase.global.LoadSettings(nameof(LaClock), m_Setting, new ModSettings(this));
 

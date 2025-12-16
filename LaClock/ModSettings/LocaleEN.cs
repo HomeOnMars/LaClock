@@ -41,6 +41,9 @@ Examples:
 Note: You can also surround parts with double asterisks to make them **\*\*bold\*\***.
 " },
 
+                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockSizeMultiplier)), "Clock Width (in-game)" },
+                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockSizeMultiplier)), "Change the multipler for the clock's width (applies in game only, editor not affected)" },
+
                 { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.EnableBlink)), "Enable blink" },
                 { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.EnableBlink)), "Enable blinking when below conditions are met." },
 

@@ -4,6 +4,7 @@ using Game.Modding;
 using Game.Settings;
 using Game.UI.Widgets;
 using System;
+using Game.Prefabs;
 
 namespace LaClock
 {
@@ -14,7 +15,7 @@ namespace LaClock
     {
         public const string kSection = "Main";
 
-        public const string kHiddenGroup = "(Hidden)";
+        //public const string kHiddenGroup = "(Hidden)";
         public const string kFormatGroup = "Formatting";
         public const string kFrictionGroup = "Friction";
 
@@ -25,6 +26,8 @@ namespace LaClock
             { ClockFormatEnum.Sts, "T"},
             { ClockFormatEnum.Sg,  "g"},
             { ClockFormatEnum.Sgs, "G"},
+            { ClockFormatEnum.Sf,  "f"},
+            { ClockFormatEnum.Sfs, "F"},
             { ClockFormatEnum.Su,  "u"},
             { ClockFormatEnum.ISO8601syk, "yyyy-MM-ddTHH:mm:ssK"},
             { ClockFormatEnum.HoM0, "**HH:mm** | ddd"},
@@ -71,8 +74,26 @@ namespace LaClock
             }
         }
 
-        public string ClockFormatStringActual { get; private set; }
-        void UpdateClockFormatStringActual()
+
+        private float _clockSizeMultiplier { get; set; } = 1f;
+        [SettingsUISlider(min = 50f, max = 200f, step = 5f, scalarMultiplier = 100f, unit = "percentage")]
+        [SettingsUISection(kSection, kFormatGroup)]
+        public float ClockSizeMultiplier
+        {
+            get { return _clockSizeMultiplier; }
+            set
+            {
+                _clockSizeMultiplier = value;
+                UpdateClockFormatStringActual();
+            }
+        }
+
+        public string ClockSize { get; private set; } = "240rem";
+
+
+        // must be initialized the same as _clockFormatString
+        public string ClockFormatStringActual { get; private set; } = "t";
+        protected void UpdateClockFormatStringActual()
         {
             switch (_clockFormatChoice)
             {
@@ -86,12 +107,24 @@ namespace LaClock
                     }
                     else
                     {
-                        ClockFormatStringActual = $"Error: Unexpected `ClockFormatChoice` input '{_clockFormatChoice}'. Should not have happened.";
-                        log.Error(ClockFormatStringActual);
+                        ClockFormatStringActual = $"Error: Unexpected ClockFormatChoice.";
+                        log.Error($"Error: Unexpected `ClockFormatChoice` input '{_clockFormatChoice}'. Should not have happened.");
                     }
                     break;
             }
+            var ExampleDateTimeString = UISystem.GetTimeString(kExampleDateTime);
+            // ClockSizeRem minimum 10rem
+            int ClockSizeRem = Math.Max((int)((ExampleDateTimeString.Length+4f) * 8 * ClockSizeMultiplier), 10);
+            ClockSize = $"{ClockSizeRem:D}rem";
+
+            Mod.log.Info($@"{nameof(UpdateClockFormatStringActual)}:
+                {nameof(ClockFormatStringActual)}: {ClockFormatStringActual}
+                {nameof(ExampleDateTimeString)}: {ExampleDateTimeString}
+                {nameof(ClockSize)}: {ClockSize}");
+
         }
+
+
 
         [SettingsUISection(kSection, kFrictionGroup)]
         public bool EnableBlink { get; set; } = false;
@@ -113,7 +146,7 @@ namespace LaClock
         {
             ClockFormatChoice = ClockFormatEnum.Custom;
             ClockFormatString = "t";
-
+            ClockSizeMultiplier = 1f;
             EnableBlink = false;
             BlinkPerMin = 60;
             BlinkDurationSec = 12;
@@ -129,6 +162,8 @@ namespace LaClock
             Sts,
             Sg,
             Sgs,
+            Sf,
+            Sfs,
             Su,
             ISO8601syk,
             HoM0,

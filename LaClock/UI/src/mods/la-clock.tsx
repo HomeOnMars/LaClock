@@ -8,6 +8,7 @@ import mod from "../../mod.json"
 
 let textRenderer = new MarkdownRenderer();
 const currentSystemTimeBinding = bindValue<string>(mod.id, "CurrentSystemTime", "Error")
+const clockWidthBinding = bindValue<string>(mod.id, "ClockWidth", "240rem")
 const doBlinkBinding = bindValue<boolean>(mod.id, "DoBlink", true)
 
 
@@ -18,15 +19,16 @@ export const LaClockComponent: ModuleRegistryExtend = (Component) => {
 
     return (props) => {
         const { children, ...otherProps } = props || {};
-        const currentSystemTimeValue = useValue(currentSystemTimeBinding);
+        const currentSystemTime = useValue(currentSystemTimeBinding);
+        const clockWidth = useValue(clockWidthBinding);
         const doBlink = useValue(doBlinkBinding);
 
         return (
             <>
-                <div className={"field_eKJ" + (doBlink ? ` ${laClockStyles.blink}` : "")}>
+                <div className={"field_eKJ" + (doBlink ? ` ${laClockStyles.blink}` : "")} style={{ width: clockWidth }}>
                     <div className={"container_kOI container_MC3"}>
                         <div className={"label_qsp label_mWz content_syM"}>
-                            {FormattedText({ text: currentSystemTimeValue, renderer: textRenderer })}
+                            {FormattedText({ text: currentSystemTime, renderer: textRenderer })}
                         </div>
                     </div>
                 </div>
@@ -42,7 +44,7 @@ export const LaClockEditorComponent: ModuleRegistryExtend = (Component) => {
 
     return (props) => {
         const { children, ...otherProps } = props || {};
-        const currentSystemTimeValue = useValue(currentSystemTimeBinding);
+        const currentSystemTime = useValue(currentSystemTimeBinding);
         const doBlink = useValue(doBlinkBinding);
 
         return (
@@ -51,7 +53,7 @@ export const LaClockEditorComponent: ModuleRegistryExtend = (Component) => {
                 <div className={"field_eKJ" + (doBlink ? ` ${laClockStyles.blink}` : "")} style={{ width: "auto" }}>
                     <div className={"container_kOI container_MC3"}>
                         <div className={"label_qsp label_mWz content_syM"}>
-                            {FormattedText({ text: currentSystemTimeValue, renderer: textRenderer })}
+                            {FormattedText({ text: currentSystemTime, renderer: textRenderer })}
                         </div>
                     </div>
                 </div>

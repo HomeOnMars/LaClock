@@ -4,6 +4,13 @@ ChangeLog
 LaClock ChangeLog
 -------------------------------------------------------------------------------
 
+### v1.4.0 <-- v1.3.0 | `2025-12-16`
+
+- Clock size in-game now relative to displayed time length (instead of fixed width)
+- Add a slider for resize the clock in-game
+- Two more longer clock format options
+- ... 
+
 ### v1.3.0 <-- v1.2.0 | `2025-12-09`
 
 - Add localizations.

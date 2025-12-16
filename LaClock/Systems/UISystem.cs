@@ -6,19 +6,21 @@ namespace LaClock
 {
     public partial class UISystem: UISystemBase
     {
-        // See <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
-        // and <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
-        protected static string CurrentSystemTime()
+        public static string GetTimeString(DateTime time)
         {
+            // See <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
+            // and <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
             try
             {
-                return DateTime.Now.ToString(Mod.m_Setting.ClockFormatStringActual);
+                return time.ToString(Mod.m_Setting.ClockFormatStringActual);
             }
             catch (FormatException)
             {
                 return "Invalid Formatting";
             }
         }
+        protected static string CurrentSystemTime() => GetTimeString(DateTime.Now);
+        protected static string ClockWidth() => Mod.m_Setting.ClockSize;
 
         protected static bool DoBlink()
         {
@@ -44,8 +46,9 @@ namespace LaClock
             base.OnCreate();
 
             AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "CurrentSystemTime", CurrentSystemTime));
+            AddUpdateBinding(new GetterValueBinding<string>(Mod.ID, "ClockWidth", ClockWidth));
             AddUpdateBinding(new GetterValueBinding<bool>(Mod.ID, "DoBlink", DoBlink));
-            Mod.log.Info($"{nameof(CurrentSystemTime)}: {CurrentSystemTime()}");
+            //Mod.log.Info($"{nameof(CurrentSystemTime)}: {CurrentSystemTime()}");
         }
 
 
