@@ -20,7 +20,7 @@ LaClock Mod Info
 - Toolbar clock displaying system time
 - Works both in game and in editor
 - Customizable display format
-- Clock size adjustable in settings
+- Clock width adjustable in settings
 - Option to making the clock blink every hour (require enabling in the settings)
 - Localizations included (require [I18n Everywhere](https://mods.paradoxplaza.com/mods/75426/Windows) Mod).
   Translated with much help from machine translation.
@@ -30,7 +30,7 @@ LaClock Mod Info
 Since the wonderful [System Clock Mod](https://mods.paradoxplaza.com/mods/107257/Windows)
 hadn't been updated for about a month when 1.3.6f1 patch dropped,
 I figured maybe I could put together a replacement so I don't lose track of time ever so often.
-(That mod has been updated now, but now I am in this too deep to stop.)
+(That mod has been updated now, but I am already in this too deep to stop.)
 
 So, welcome to my first experimental mod for Cities: Skylines II,
 which is also my first C#/React/TypeScript project.
