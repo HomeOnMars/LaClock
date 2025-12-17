@@ -20,7 +20,7 @@ LaClock Mod Info
 - Toolbar clock displaying system time
 - Works both in game and in editor
 - Customizable display format
-- Resizable in game
+- Clock size adjustable in settings
 - Option to making the clock blink every hour (require enabling in the settings)
 - Localizations included (require [I18n Everywhere](https://mods.paradoxplaza.com/mods/75426/Windows) Mod).
   Translated with much help from machine translation.

@@ -3,7 +3,6 @@ using Colossal.Logging;
 using Game;
 using Game.Modding;
 using Game.SceneFlow;
-using Game.Settings;
 
 namespace LaClock
 {
@@ -24,6 +23,7 @@ namespace LaClock
             m_Setting = new ModSettings(this);
             m_Setting.RegisterInOptionsUI();
             GameManager.instance.localizationManager.AddSource("en-US", new LocaleEN(m_Setting));
+            GameManager.instance.localizationManager.onActiveDictionaryChanged += UpdateClockLocale;
 
             AssetDatabase.global.LoadSettings(nameof(LaClock), m_Setting, new ModSettings(this));
 
@@ -41,8 +41,13 @@ namespace LaClock
         }
 
 
-        // Check out the following references
-        // https://learn.microsoft.com/en-us/dotnet/api/system.datetime.now?view=net-9.0#system-datetime-now
+        private void UpdateClockLocale()
+        {
+            m_Setting.UpdateClockFormatSettings();
+            LocaleEN.UpdateLocaleDictionaryEntries(
+                GameManager.instance.localizationManager.activeDictionary, m_Setting);
+        }
+
 
     }
 }

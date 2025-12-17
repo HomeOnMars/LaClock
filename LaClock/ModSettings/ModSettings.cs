@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
-using Colossal.IO.AssetDatabase;
+﻿using Colossal.IO.AssetDatabase;
 using Game.Modding;
+using Game.SceneFlow;
 using Game.Settings;
 using Game.UI.Widgets;
 using System;
-using Game.Prefabs;
+using System.Collections.Generic;
+using System.Globalization;
 
 namespace LaClock
 {
@@ -55,7 +56,7 @@ namespace LaClock
             set
             {
                 _clockFormatChoice = value;
-                UpdateClockFormatStringActual();
+                UpdateClockFormatSettings();
             }
         }
 
@@ -70,12 +71,12 @@ namespace LaClock
             get { return _clockFormatString; }
             set {
                 _clockFormatString = value;
-                UpdateClockFormatStringActual();
+                UpdateClockFormatSettings();
             }
         }
 
 
-        private float _clockSizeMultiplier { get; set; } = 1f;
+        private float _clockSizeMultiplier { get; set; } = 1.2f;
         [SettingsUISlider(min = 50f, max = 200f, step = 5f, scalarMultiplier = 100f, unit = "percentage")]
         [SettingsUISection(kSection, kFormatGroup)]
         public float ClockSizeMultiplier
@@ -84,46 +85,78 @@ namespace LaClock
             set
             {
                 _clockSizeMultiplier = value;
-                UpdateClockFormatStringActual();
+                UpdateClockFormatSettings();
             }
         }
 
-        public string ClockSize { get; private set; } = "240rem";
+        public string ClockWidth { get; private set; } = "240rem";
+
+        public CultureInfo ClockCultureInfo { get; private set; }
 
 
         // must be initialized the same as _clockFormatString
         public string ClockFormatStringActual { get; private set; } = "t";
-        protected void UpdateClockFormatStringActual()
+        public void UpdateClockFormatSettings()
         {
-            switch (_clockFormatChoice)
+            if (_clockFormatChoice == ClockFormatEnum.Custom)
             {
-                case ClockFormatEnum.Custom:
-                    ClockFormatStringActual = _clockFormatString;
-                    break;
-                default:
-                    if (kClockFormatEnumToString.TryGetValue(_clockFormatChoice, out var tmpClockFormatString))
-                    {
-                        ClockFormatStringActual = tmpClockFormatString;
-                    }
-                    else
-                    {
-                        ClockFormatStringActual = $"Error: Unexpected ClockFormatChoice.";
-                        log.Error($"Error: Unexpected `ClockFormatChoice` input '{_clockFormatChoice}'. Should not have happened.");
-                    }
-                    break;
+                ClockFormatStringActual = _clockFormatString;
             }
-            var ExampleDateTimeString = UISystem.GetTimeString(kExampleDateTime);
-            // ClockSizeRem minimum 10rem
-            int ClockSizeRem = Math.Max((int)((ExampleDateTimeString.Length+4f) * 8 * ClockSizeMultiplier), 10);
-            ClockSize = $"{ClockSizeRem:D}rem";
+            else if (kClockFormatEnumToString.TryGetValue(_clockFormatChoice, out var tmpClockFormatString))
+            {
+                ClockFormatStringActual = tmpClockFormatString;
+            }
+            else
+            {
+                ClockFormatStringActual = $"Error: Unexpected ClockFormatChoice.";
+                log.Error($"Error: Unexpected `ClockFormatChoice` input '{_clockFormatChoice}'. Should not have happened.");
+            }
 
-            Mod.log.Info($@"{nameof(UpdateClockFormatStringActual)}:
+            try
+            {
+                ClockCultureInfo = new CultureInfo(GameManager.instance.localizationManager.activeLocaleId);
+            }
+            catch (CultureNotFoundException)
+            {
+                try
+                {
+                    ClockCultureInfo = new CultureInfo(GameManager.instance.localizationManager.fallbackLocaleId);
+                }
+                catch (CultureNotFoundException)
+                {
+                    ClockCultureInfo = new CultureInfo("en-US");
+                }
+            }
+
+            var ExampleDateTimeString = GetTimeString(kExampleDateTime);
+            // ClockSizeRem minimum 10rem
+            int ClockSizeRem = Math.Max((int)((ExampleDateTimeString.Length + 4f) * 8 * ClockSizeMultiplier), 10);
+            ClockWidth = $"{ClockSizeRem:D}rem";
+
+            Mod.log.Info($@"{nameof(UpdateClockFormatSettings)}:
                 {nameof(ClockFormatStringActual)}: {ClockFormatStringActual}
                 {nameof(ExampleDateTimeString)}: {ExampleDateTimeString}
-                {nameof(ClockSize)}: {ClockSize}");
+                {nameof(ClockWidth)}: {ClockWidth}
+                {nameof(GameManager.instance.localizationManager.activeLocaleId)}: {GameManager.instance.localizationManager.activeLocaleId}
+                {nameof(GameManager.instance.localizationManager.fallbackLocaleId)}: {GameManager.instance.localizationManager.fallbackLocaleId}
+                {nameof(ClockCultureInfo)}: {ClockCultureInfo.Name}");
 
         }
 
+        public static string GetTimeString(DateTime time, string format, CultureInfo culture)
+        {
+            // See <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
+            // and <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
+            try
+            {
+                return time.ToString(format, culture);
+            }
+            catch (FormatException)
+            {
+                return "Invalid Formatting";
+            }
+        }
+        public string GetTimeString(DateTime time) => GetTimeString(time, ClockFormatStringActual, ClockCultureInfo);
 
 
         [SettingsUISection(kSection, kFrictionGroup)]
@@ -146,7 +179,7 @@ namespace LaClock
         {
             ClockFormatChoice = ClockFormatEnum.Custom;
             ClockFormatString = "t";
-            ClockSizeMultiplier = 1f;
+            ClockSizeMultiplier = 1.2f;  // set to 120% to accommodate some languages having wide characters
             EnableBlink = false;
             BlinkPerMin = 60;
             BlinkDurationSec = 12;

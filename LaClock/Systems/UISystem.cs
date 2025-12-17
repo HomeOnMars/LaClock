@@ -6,21 +6,9 @@ namespace LaClock
 {
     public partial class UISystem: UISystemBase
     {
-        public static string GetTimeString(DateTime time)
-        {
-            // See <https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
-            // and <https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
-            try
-            {
-                return time.ToString(Mod.m_Setting.ClockFormatStringActual);
-            }
-            catch (FormatException)
-            {
-                return "Invalid Formatting";
-            }
-        }
-        protected static string CurrentSystemTime() => GetTimeString(DateTime.Now);
-        protected static string ClockWidth() => Mod.m_Setting.ClockSize;
+
+        protected static string CurrentSystemTime() => Mod.m_Setting.GetTimeString(DateTime.Now);
+        protected static string ClockWidth() => Mod.m_Setting.ClockWidth;
 
         protected static bool DoBlink()
         {

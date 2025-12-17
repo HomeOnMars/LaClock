@@ -1,5 +1,5 @@
 ﻿using Colossal;
-using Colossal.Logging;
+using Colossal.Localization;
 using System.Collections.Generic;
 
 namespace LaClock
@@ -11,6 +11,26 @@ namespace LaClock
         {
             m_Setting = setting;
         }
+
+        public static void UpdateLocaleDictionaryEntries(Dictionary<string, string> localeEntries, ModSettings setting)
+        {
+            foreach (var entry in ModSettings.kClockFormatEnumToString)
+            {
+                localeEntries[setting.GetEnumValueLocaleID(entry.Key)] = ModSettings.GetTimeString(
+                    ModSettings.kExampleDateTime, entry.Value, setting.ClockCultureInfo);
+            }
+        }
+        public static void UpdateLocaleDictionaryEntries(LocalizationDictionary localeEntries, ModSettings setting)
+        {
+            foreach (var entry in ModSettings.kClockFormatEnumToString)
+            {
+                localeEntries.Add(
+                    setting.GetEnumValueLocaleID(entry.Key),
+                    ModSettings.GetTimeString(
+                        ModSettings.kExampleDateTime, entry.Value, setting.ClockCultureInfo));
+            }
+        }
+
         public IEnumerable<KeyValuePair<string, string>> ReadEntries(IList<IDictionaryEntryError> errors, Dictionary<string, int> indexCounts)
         {
             var localeEntries = new Dictionary<string, string>
@@ -55,13 +75,9 @@ Note: You can also surround parts with double asterisks to make them **\*\*bold\
                 { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.Custom), "Custom..." },
             };
 
-            // update ClockFormatEnum entries
-            foreach (var entry in ModSettings.kClockFormatEnumToString)
-            {
-                localeEntries[m_Setting.GetEnumValueLocaleID(entry.Key)] = ModSettings.kExampleDateTime.ToString(entry.Value);
-            }
+            UpdateLocaleDictionaryEntries(localeEntries, m_Setting);
 
-            Mod.log.Info($"{m_Setting.GetOptionGroupLocaleID(ModSettings.kFormatGroup)}");
+            Mod.log.Info($"{nameof(localeEntries)} updated.");
 
             return localeEntries;
         }

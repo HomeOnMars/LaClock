@@ -68,6 +68,7 @@ which is of much inspirations for this project.
 - Add a slider for resize the clock in-game
 - Add and tweak clock format options
 - Update localizations
+- Clock display now respond to game localizations
   </ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon, buymeacoffee, kofi, crowdin, gitlab-->
 	<ExternalLink Type="github" Url="https://github.com/HomeOnMars/LaClock" />
