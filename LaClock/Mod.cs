@@ -28,6 +28,8 @@ namespace LaClock
             AssetDatabase.global.LoadSettings(nameof(LaClock), m_Setting, new ModSettings(this));
 
             updateSystem.UpdateAt<UISystem>(SystemUpdatePhase.UIUpdate);
+
+            UpdateClockLocale();
         }
 
         public void OnDispose()
