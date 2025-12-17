@@ -8,7 +8,7 @@
 		<PublishConfigurationPath>Properties\PublishConfiguration.xml</PublishConfigurationPath>
 		<PackageId>$(AssemblyName)</PackageId>
 		<Title>La Clock (Show System Time)</Title>
-		<Version>1.3.0</Version>
+		<Version>1.4.0</Version>
 		<Description>Display current system time in CSL2 toolbar.</Description>
 		<Copyright>Copyright © 2025</Copyright>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
