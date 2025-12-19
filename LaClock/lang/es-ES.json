@@ -7,6 +7,8 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Seleccione un formato de reloj en la lista desplegable",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato de reloj (personalizado...)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato de visualización del reloj\n\nEjemplo:\n\n- **HH:mm** | Forma como <23:45>\n- **hh:mm tt** | parece <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | dd dd MMM** | parece <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Forma como <2025-09-01 11:45:02 PM>\n- Para obtener más información, busque en Internet \"cadena de formato de fecha y hora personalizada .NET\"\n\nNota: Agregue dos asteriscos antes y después de la parte que desea resaltar para hacer que esa parte sea **\\*\\*negrita\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "Localización del formato de fecha y hora",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "La elección del estilo de localización para la visualización de la fecha y la hora del reloj.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Ancho del reloj",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Cambiar el multiplicador para el ancho del reloj (se aplica solo en el juego, el editor no se ve afectado)",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Habilitar parpadeo del reloj",
@@ -15,5 +17,7 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "¿Con qué frecuencia parpadear el reloj?",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Duración del parpadeo (segundos)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "¿Cuántos segundos dura cada destello?",
+  "Options.LaClock.LaClock.Mod.CLOCKCULTUREENUM[FollowSystem]": "Seguir el sistema",
+  "Options.LaClock.LaClock.Mod.CLOCKCULTUREENUM[FollowGame]": "Seguir juego",
   "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "Personalizado…"
 }

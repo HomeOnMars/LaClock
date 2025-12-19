@@ -7,6 +7,8 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Bonvolu elekti horloĝan formaton en la fallisto",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato de horloĝo (Agordi...)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato de horloĝo\n\nEkzemplo:\n\n- **HH:mm** | Formu kiel <23:45>\n- **hh:mm tt** | aspektas kiel <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | aspektas kiel <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Formu kiel <2025-09-01 11:45:02 PM>\n- Por pliaj informoj, bonvolu serĉi en la Interreto \".NET-propra data kaj hora formato ĉeno\"\n\nNoto: Aldonu du steletojn antaŭ kaj post la parto, kiun vi volas reliefigi, por fari tiun parton **\\*\\*grasa\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "Loko de dattempoformato",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "La elekta stilo de lokalizo por la dato kaj horo de la horloĝo.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Horloĝlarĝo",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Ŝanĝu la multiplikilon por la larĝo de la horloĝo (validas nur en ludo, redaktilo ne tuŝita)",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "Ebligu horloĝan ekbrilon",
@@ -15,5 +17,7 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "Kiom ofte ekbriligi la horloĝon",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Daŭro de ekbrilo (sekundoj)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "Kiom da sekundoj daŭras ĉiu ekbrilo?",
+  "Options.LaClock.LaClock.Mod.CLOCKCULTUREENUM[FollowSystem]": "Sekvu Sistemon",
+  "Options.LaClock.LaClock.Mod.CLOCKCULTUREENUM[FollowGame]": "Sekvu Ludon",
   "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "Agordi..."
 }

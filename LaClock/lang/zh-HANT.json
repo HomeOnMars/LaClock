@@ -7,6 +7,8 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "請在下拉清單中選擇一個時鐘格式",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "時鐘格式（自訂……）",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "時鐘顯示格式\n\n示例：\n\n- **HH:mm**     | 形如 <23:45>\n- **hh:mm tt**  | 形如 <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM**  | 形如 <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt**    | 形如 <2025-09-01 11:45:02 PM>\n- 更多資訊請自行上網搜索“.NET自訂日期和時間格式字串”\n\n注：在想要突出的部分前後加兩個星號可以使那一部分**\\*\\*加粗\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "日期時間格式本地化",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "時鐘日期和時間顯示的本地化樣式選擇。",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "時鐘寬度",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "更改時鐘寬度倍數（僅適用於遊戲，編輯器不受影響）",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "啟用時鐘閃爍",
@@ -15,5 +17,7 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "每隔多久閃爍一次時鐘",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "閃爍時長（秒）",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "每次閃爍閃爍幾秒？",
+  "Options.LaClock.LaClock.Mod.CLOCKCULTUREENUM[FollowSystem]": "跟隨系統",
+  "Options.LaClock.LaClock.Mod.CLOCKCULTUREENUM[FollowGame]": "跟隨遊戲",
   "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "自訂……"
 }

@@ -7,6 +7,8 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "ドロップダウンリストから時計の形式を選択してください",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "時計の形式 (カスタム...)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "時計の表示形式\n\n例:\n\n- **HH:mm** | <23:45> のような形式\n- **hh:mm tt** | <11:45 PM> のような形式\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | <**23:45** \\| Sat 01 Nov> のような形式\n- **yyyy-MM-dd hh:mm:ss tt** | <2025-09-01 11:45:02 PM> のような形式\n- 詳細については、「.NET カスタム日付および時刻形式文字列」をオンラインで検索してください。\n\n注: 強調表示したい部分の前後にアスタリスクを 2 つ追加すると、その部分が太字になります。",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "日時形式のローカリゼーション",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "時計の日付と時刻表示のローカリゼーション スタイルの選択。",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "クロック幅",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "クロックの幅の乗数を変更します (ゲーム内のみに適用され、エディターには影響しません)",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.EnableBlink]": "時計の点滅を有効にする",
@@ -15,5 +17,7 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkPerMin]": "時計はどのくらいの頻度で点滅しますか?",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "点滅時間（秒）",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.BlinkDurationSec]": "1回あたり何秒間点滅しますか?",
+  "Options.LaClock.LaClock.Mod.CLOCKCULTUREENUM[FollowSystem]": "フォローシステム",
+  "Options.LaClock.LaClock.Mod.CLOCKCULTUREENUM[FollowGame]": "フォローゲーム",
   "Options.LaClock.LaClock.Mod.CLOCKFORMATENUM[Custom]": "カスタム..."
 }
