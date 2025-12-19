@@ -41,11 +41,11 @@ namespace LaClock
                 { m_Setting.GetOptionGroupLocaleID(ModSettings.kFormatGroup), "Formatting" },
                 { m_Setting.GetOptionGroupLocaleID(ModSettings.kFrictionGroup), "Friction" },
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockFormatChoice)), "Clock Formatting" },
+                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockFormatChoice)), "Clock formatting" },
                 { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockFormatChoice)), "Pick a format for the clock." },
 
-                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockFormatString)), "Clock Formatting (Custom...)" },
-                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockFormatString)), @$"Display Format of the Clock.
+                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockFormatString)), "Clock formatting (Custom...)" },
+                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockFormatString)), @$"Display format of the clock.
 
 Examples:
 
@@ -57,6 +57,8 @@ Examples:
 
 Note: You can also surround parts with double asterisks to make them **\*\*bold\*\***.
 " },
+                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockCultureChoice)), "Datetime format localization" },
+                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockCultureChoice)), "The localization style choice for the clock's date and time display." },
 
                 { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockSizeMultiplier)), "Clock Width" },
                 { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockSizeMultiplier)), "Change the multipler for the clock's width (applies in game only, editor not affected)" },
@@ -70,7 +72,8 @@ Note: You can also surround parts with double asterisks to make them **\*\*bold\
                 { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.BlinkDurationSec)), "Blink duration (in seconds)" },
                 { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.BlinkDurationSec)), "How many seconds to blink?" },
 
-
+                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockCultureEnum.FollowSystem), "Follow System" },
+                { m_Setting.GetEnumValueLocaleID(ModSettings.ClockCultureEnum.FollowGame), "Follow Game" },
 
                 { m_Setting.GetEnumValueLocaleID(ModSettings.ClockFormatEnum.Custom), "Custom..." },
             };

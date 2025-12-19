@@ -75,6 +75,19 @@ namespace LaClock
             }
         }
 
+        private ClockCultureEnum _clockCultureChoice = ClockCultureEnum.FollowSystem;
+        [SettingsUITextInput]
+        [SettingsUISection(kSection, kFormatGroup)]
+        public ClockCultureEnum ClockCultureChoice
+        {
+            get { return _clockCultureChoice; }
+            set
+            {
+                _clockCultureChoice = value;
+                UpdateClockFormatSettings();
+            }
+        }
+
 
         private float _clockSizeMultiplier { get; set; } = 1.2f;
         [SettingsUISlider(min = 50f, max = 200f, step = 5f, scalarMultiplier = 100f, unit = "percentage")]
@@ -112,20 +125,32 @@ namespace LaClock
                 log.Error($"Error: Unexpected `ClockFormatChoice` input '{_clockFormatChoice}'. Should not have happened.");
             }
 
-            try
+            switch (ClockCultureChoice)
             {
-                ClockCultureInfo = new CultureInfo(GameManager.instance.localizationManager.activeLocaleId);
-            }
-            catch (CultureNotFoundException)
-            {
-                try
-                {
-                    ClockCultureInfo = new CultureInfo(GameManager.instance.localizationManager.fallbackLocaleId);
-                }
-                catch (CultureNotFoundException)
-                {
-                    ClockCultureInfo = new CultureInfo("en-US");
-                }
+                case ClockCultureEnum.FollowSystem:
+                    ClockCultureInfo = CultureInfo.CurrentCulture;
+                    break;
+                case ClockCultureEnum.FollowGame:
+                    try
+                    {
+                        ClockCultureInfo = new CultureInfo(GameManager.instance.localizationManager.activeLocaleId);
+                    }
+                    catch (CultureNotFoundException)
+                    {
+                        try
+                        {
+                            ClockCultureInfo = new CultureInfo(GameManager.instance.localizationManager.fallbackLocaleId);
+                        }
+                        catch (CultureNotFoundException)
+                        {
+                            ClockCultureInfo = new CultureInfo("en-US");
+                        }
+                    }
+                    break;
+                default:
+                    ClockCultureInfo = CultureInfo.CurrentCulture;
+                    Mod.log.Error($"{nameof(UpdateClockFormatSettings)}: Unknown ClockCultureChoice. Should not have happened.");
+                    break;
             }
 
             var ExampleDateTimeString = GetTimeString(kExampleDateTime);
@@ -179,6 +204,7 @@ namespace LaClock
         {
             ClockFormatChoice = ClockFormatEnum.Custom;
             ClockFormatString = "t";
+            ClockCultureChoice = ClockCultureEnum.FollowSystem;
             ClockSizeMultiplier = 1.2f;  // set to 120% to accommodate some languages having wide characters
             EnableBlink = false;
             BlinkPerMin = 60;
@@ -207,6 +233,12 @@ namespace LaClock
             HoM1s,
             HoM1y,
             HoM1sy,
+        }
+
+        public enum ClockCultureEnum
+        {
+            FollowSystem,
+            FollowGame,
         }
 
         public DropdownItem<int>[] GetBlinkPerMinDropdownItems()
