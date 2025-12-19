@@ -8,6 +8,7 @@ Author: HomeOnMars
 -------------------------------------------------------------------------------
 """
 
+from os.path import sep
 import json
 import translators
 
@@ -145,4 +146,4 @@ class LocaleGen:
 
 if __name__ == '__main__':
     # _ = translators.preaccelerate_and_speedtest()    # optional
-    _ = LocaleGen().load().update_files(translator="google")
+    _ = LocaleGen(f"lang{sep}").load().update_files(translator="google", prefix_tag="")
