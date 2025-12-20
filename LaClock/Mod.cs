@@ -1,5 +1,6 @@
 ﻿using Colossal.IO.AssetDatabase;
 using Colossal.Logging;
+using Colossal.Serialization.Entities;
 using Game;
 using Game.Modding;
 using Game.SceneFlow;
@@ -24,6 +25,8 @@ namespace LaClock
             m_Setting.RegisterInOptionsUI();
             GameManager.instance.localizationManager.AddSource("en-US", new LocaleEN(m_Setting));
             GameManager.instance.localizationManager.onActiveDictionaryChanged += UpdateClockLocale;
+            // update again after load because the CultureInfo.CurrentCulture seems to be empty when initially loading settings?
+            GameManager.instance.onGameLoadingComplete += UpdateClockLocale;
 
             AssetDatabase.global.LoadSettings(nameof(LaClock), m_Setting, new ModSettings(this));
 
@@ -42,14 +45,17 @@ namespace LaClock
             }
         }
 
-
         private void UpdateClockLocale()
         {
             m_Setting.UpdateClockFormatSettings();
-            LocaleEN.UpdateLocaleDictionaryEntries(
-                GameManager.instance.localizationManager.activeDictionary, m_Setting);
+            m_Setting.UpdateActiveLocaleEntries();
         }
 
+        private void UpdateClockLocale(Purpose purpose, GameMode mode)
+        {
+            Mod.log.Info($@"{nameof(UpdateClockLocale)}(): {nameof(purpose)} {purpose.ToString()}, {nameof(mode)} {mode.ToString()}.");
+            UpdateClockLocale();
+        }
 
     }
 }

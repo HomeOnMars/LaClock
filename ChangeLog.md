@@ -4,6 +4,12 @@ ChangeLog
 LaClock ChangeLog
 -------------------------------------------------------------------------------
 
+### v1.4.1 <-- v1.4.0 | `2025-12-20`
+
+- Can now pick clock datetime format localization to follow system (default) or follow game
+- Update localizations
+- Improve logging
+
 ### v1.4.0 <-- v1.3.0 | `2025-12-17`
 
 - Clock size in-game now relative to displayed time length (instead of fixed width)

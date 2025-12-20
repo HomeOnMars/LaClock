@@ -85,6 +85,7 @@ namespace LaClock
             {
                 _clockCultureChoice = value;
                 UpdateClockFormatSettings();
+                UpdateActiveLocaleEntries();
             }
         }
 
@@ -125,7 +126,7 @@ namespace LaClock
                 log.Error($"Error: Unexpected `ClockFormatChoice` input '{_clockFormatChoice}'. Should not have happened.");
             }
 
-            switch (ClockCultureChoice)
+            switch (_clockCultureChoice)
             {
                 case ClockCultureEnum.FollowSystem:
                     ClockCultureInfo = CultureInfo.CurrentCulture;
@@ -158,15 +159,18 @@ namespace LaClock
             int ClockSizeRem = Math.Max((int)((ExampleDateTimeString.Length + 4f) * 8 * ClockSizeMultiplier), 10);
             ClockWidth = $"{ClockSizeRem:D}rem";
 
-            Mod.log.Info($@"{nameof(UpdateClockFormatSettings)}:
+            Mod.log.Info($@"{nameof(UpdateClockFormatSettings)}():
                 {nameof(ClockFormatStringActual)}: {ClockFormatStringActual}
                 {nameof(ExampleDateTimeString)}: {ExampleDateTimeString}
                 {nameof(ClockWidth)}: {ClockWidth}
+                {nameof(CultureInfo)}.{nameof(CultureInfo.CurrentCulture)}: {CultureInfo.CurrentCulture.Name}
                 {nameof(GameManager.instance.localizationManager.activeLocaleId)}: {GameManager.instance.localizationManager.activeLocaleId}
                 {nameof(GameManager.instance.localizationManager.fallbackLocaleId)}: {GameManager.instance.localizationManager.fallbackLocaleId}
                 {nameof(ClockCultureInfo)}: {ClockCultureInfo.Name}");
-
         }
+
+        public void UpdateActiveLocaleEntries() => LocaleEN.UpdateLocaleDictionaryEntries(GameManager.instance.localizationManager.activeDictionary, this);
+
 
         public static string GetTimeString(DateTime time, string format, CultureInfo culture)
         {

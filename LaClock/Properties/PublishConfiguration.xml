@@ -57,18 +57,16 @@ which is of much inspirations for this project.
 	<!--Link to the forum post where the mod can be discussed-->
 	<ForumLink Value="https://forum.paradoxplaza.com/forum/threads/la-clock.1871757/" />
 	<!--Version of the mod-->
-	<ModVersion Value="1.4.0" />
+	<ModVersion Value="1.4.1" />
 	<!--Recommended version of the base game to use the mod-->
 	<GameVersion Value="1.5.*" />
 	<!--Dependency for the mod, can be set multiple times-->
 	<Dependency Id="" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
 	<ChangeLog>
-- Clock size in-game now relative to displayed time length (instead of fixed width)
-- Add a slider for resize the clock in-game
-- Add and tweak clock format options
+- Can now pick clock datetime format localization to follow system (default) or follow game
 - Update localizations
-- Clock display now respond to game localizations
+- Improve logging
   </ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon, buymeacoffee, kofi, crowdin, gitlab-->
 	<ExternalLink Type="github" Url="https://github.com/HomeOnMars/LaClock" />
