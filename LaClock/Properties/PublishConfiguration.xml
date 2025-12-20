@@ -52,6 +52,7 @@ which is of much inspirations for this project.
   <Screenshot Value="Properties/Screenshots/Screenshot02.m.jpg" />
   <Screenshot Value="Properties/Screenshots/Screenshot03.m.jpg" />
   <Screenshot Value="Properties/Screenshots/Screenshot04.m.jpg" />
+  <Screenshot Value="Properties/Screenshots/Screenshot05.m.jpg" />
 	<!--Tag, can be set multiple times-->
 	<Tag Value="" />
 	<!--Link to the forum post where the mod can be discussed-->
@@ -65,8 +66,9 @@ which is of much inspirations for this project.
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
 	<ChangeLog>
 - Can now pick clock datetime format localization to follow system (default) or follow game
-- Update localizations
 - Improve logging
+- Update localizations
+- Update Screenshots
   </ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon, buymeacoffee, kofi, crowdin, gitlab-->
 	<ExternalLink Type="github" Url="https://github.com/HomeOnMars/LaClock" />

@@ -9,6 +9,7 @@ LaClock
 > Commits there may also be combined/deleted without notice.
 
 LaClock [Paradox Mod Link](https://mods.paradoxplaza.com/mods/124553/Windows).
+Screenshot font: *Segoe Print*.
 
 LaClock Mod Info
 -------------------------------------------------------------------------------
