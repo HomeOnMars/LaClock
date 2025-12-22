@@ -7,6 +7,8 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Veuillez sélectionner un format d'horloge dans la liste déroulante",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Format d'horloge (Personnaliser...)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Format d'affichage de l'horloge\n\nExemple :\n\n- **HH:mm** | Forme comme <23:45>\n- **hh:mm tt** | on dirait <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | ressemble à <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Forme comme <2025-09-01 11:45:02 PM>\n- Pour plus d'informations, veuillez rechercher sur Internet « chaîne de format de date et d'heure personnalisée .NET »\n\nRemarque : Ajoutez deux astérisques avant et après la partie que vous souhaitez mettre en surbrillance pour la rendre **\\*\\*gras\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "Aperçu du formatage de l'horloge",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "Prévisualisez le format d'horloge personnalisé saisi.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "Localisation du format date/heure",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "Le choix du style de localisation pour l’affichage de la date et de l’heure de l’horloge.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Largeur de l'horloge",

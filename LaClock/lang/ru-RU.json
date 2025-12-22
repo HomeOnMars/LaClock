@@ -7,6 +7,8 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Пожалуйста, выберите формат часов в раскрывающемся списке",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Формат часов (Настроить...)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Формат отображения часов\n\nПример:\n\n- **HH:mm** | Форма как <23:45>\n- **hh:mm tt** | выглядит как <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | выглядит как <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Форма как <2025-09-01 11:45:02 PM>\n- Для получения дополнительной информации выполните поиск в Интернете по запросу «строка пользовательского формата даты и времени .NET».\n\nПримечание. Добавьте две звездочки до и после части, которую хотите выделить, чтобы эта часть была выделена жирным шрифтом **\\*\\*жирным\\*\\***.",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "Предварительный просмотр форматирования часов",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "Предварительный просмотр введенного пользовательского формата часов.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "Локализация формата даты и времени",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "Выбор стиля локализации для отображения даты и времени на часах.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Ширина часов",

@@ -7,6 +7,8 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Bitte wählen Sie in der Dropdown-Liste ein Uhrformat aus",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Uhrformat (benutzerdefiniert...)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Anzeigeformat der Uhr\n\nBeispiel:\n\n- **HH:mm** | Form wie <23:45>\n- **hh:mm tt** | sieht aus wie <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | sieht aus wie <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Form wie <2025-09-01 11:45:02 PM>\n- Für weitere Informationen suchen Sie bitte im Internet nach „.NET benutzerdefinierte Datums- und Uhrzeitformatzeichenfolge“.\n\nHinweis: Fügen Sie vor und nach dem Teil, den Sie hervorheben möchten, zwei Sternchen hinzu, um diesen Teil **\\*\\*fett\\*\\*** zu machen.",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "Vorschau der Uhrformatierung",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "Vorschau des eingegebenen benutzerdefinierten Uhrformats.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "Lokalisierung des Datetime-Formats",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "Die Auswahl des Lokalisierungsstils für die Datums- und Uhrzeitanzeige der Uhr.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Uhrenbreite",

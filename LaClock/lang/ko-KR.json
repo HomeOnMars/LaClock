@@ -7,6 +7,8 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "드롭다운 목록에서 시계 형식을 선택하세요",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "시계 형식(맞춤설정...)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "시계 표시 형식\n\n예:\n\n- **HH:mm** | <23:45>와 같은 형식\n- **hh:mm tt** | <11:45 PM>와 같은 형식\n- **\\*\\*HH:mm\\*\\* | ddd dd MMM** | <**23:45** \\| Sat 01 Nov>와 같은 형식\n- **yyyy-MM-dd hh:mm:ss tt** | <2025-09-01 11:45:02 PM>와 같은 형식\n- 자세한 내용은 온라인에서 \".NET 사용자 지정 날짜 및 시간 형식 문자열\"을 검색하세요.\n\n참고: 강조하고 싶은 부분 앞뒤에 별표 두 개를 추가하면 해당 부분이 굵게 표시됩니다.",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "시계 형식 미리보기",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "입력된 사용자 정의 시계 형식을 미리 봅니다.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "날짜/시간 형식 현지화",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "시계의 날짜 및 시간 표시에 대한 현지화 스타일 선택입니다.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "시계 폭",

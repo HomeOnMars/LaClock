@@ -7,6 +7,8 @@
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatChoice]": "Seleccione un formato de reloj en la lista desplegable",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato de reloj (personalizado...)",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatString]": "Formato de visualización del reloj\n\nEjemplo:\n\n- **HH:mm** | Forma como <23:45>\n- **hh:mm tt** | parece <11:45 PM>\n- **\\*\\*HH:mm\\*\\* | dd dd MMM** | parece <**23:45** \\| Sat 01 Nov>\n- **yyyy-MM-dd hh:mm:ss tt** | Forma como <2025-09-01 11:45:02 PM>\n- Para obtener más información, busque en Internet \"cadena de formato de fecha y hora personalizada .NET\"\n\nNota: Agregue dos asteriscos antes y después de la parte que desea resaltar para hacer que esa parte sea **\\*\\*negrita\\*\\***",
+  "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "Vista previa del formato del reloj",
+  "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockFormatPreview]": "Obtenga una vista previa del formato de reloj personalizado ingresado.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "Localización del formato de fecha y hora",
   "Options.OPTION_DESCRIPTION[LaClock.LaClock.Mod.ModSettings.ClockCultureChoice]": "La elección del estilo de localización para la visualización de la fecha y la hora del reloj.",
   "Options.OPTION[LaClock.LaClock.Mod.ModSettings.ClockSizeMultiplier]": "Ancho del reloj",
