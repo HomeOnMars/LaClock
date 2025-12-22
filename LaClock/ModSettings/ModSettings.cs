@@ -75,6 +75,11 @@ namespace LaClock
             }
         }
 
+        private string _clockFormatPreview = "";
+        [SettingsUISection(kSection, kFormatGroup)]
+        [SettingsUIHideByCondition(typeof(ModSettings), nameof(ClockFormatChoiceIsCustom), invert: true)]
+        public string ClockFormatPreview => _clockFormatPreview;
+
         private ClockCultureEnum _clockCultureChoice = ClockCultureEnum.FollowSystem;
         [SettingsUITextInput]
         [SettingsUISection(kSection, kFormatGroup)]
@@ -154,14 +159,14 @@ namespace LaClock
                     break;
             }
 
-            var ExampleDateTimeString = GetTimeString(kExampleDateTime);
+            _clockFormatPreview = GetTimeString(kExampleDateTime);
             // ClockSizeRem minimum 10rem
-            int ClockSizeRem = Math.Max((int)((ExampleDateTimeString.Length + 4f) * 8 * ClockSizeMultiplier), 10);
+            int ClockSizeRem = Math.Max((int)((ClockFormatPreview.Length + 4f) * 8 * ClockSizeMultiplier), 10);
             ClockWidth = $"{ClockSizeRem:D}rem";
 
             Mod.log.Info($@"{nameof(UpdateClockFormatSettings)}():
                 {nameof(ClockFormatStringActual)}: {ClockFormatStringActual}
-                {nameof(ExampleDateTimeString)}: {ExampleDateTimeString}
+                {nameof(ClockFormatPreview)}: {ClockFormatPreview}
                 {nameof(ClockWidth)}: {ClockWidth}
                 {nameof(CultureInfo)}.{nameof(CultureInfo.CurrentCulture)}: {CultureInfo.CurrentCulture.Name}
                 {nameof(GameManager.instance.localizationManager.activeLocaleId)}: {GameManager.instance.localizationManager.activeLocaleId}

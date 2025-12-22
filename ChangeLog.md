@@ -6,7 +6,8 @@ LaClock ChangeLog
 
 ### v1.4.2 <-- v1.4.1 | `2025-12-22`
 
-- Streamline mod initialization and logging (no functional changes)
+- Streamline mod initialization and logging
+- Add a preview for custom clock formatting in the settings
 
 ### v1.4.1 <-- v1.4.0 | `2025-12-20`
 

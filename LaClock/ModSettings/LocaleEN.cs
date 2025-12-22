@@ -58,6 +58,9 @@ Examples:
 
 Note: You can also surround parts with double asterisks to make them **\*\*bold\*\***.
 " },
+                { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockFormatPreview)), "Clock formatting preview" },
+                { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockFormatPreview)), "Preview the entered custom clock format." },
+
                 { m_Setting.GetOptionLabelLocaleID(nameof(ModSettings.ClockCultureChoice)), "Datetime format localization" },
                 { m_Setting.GetOptionDescLocaleID(nameof(ModSettings.ClockCultureChoice)), "The localization style choice for the clock's date and time display." },
 

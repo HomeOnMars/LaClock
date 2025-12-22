@@ -65,7 +65,8 @@ which is of much inspirations for this project.
 	<Dependency Id="" />
 	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
 	<ChangeLog>
-- Streamline mod initialization and logging (no functional changes)
+- Streamline mod initialization and logging
+- Add a preview for custom clock formatting in the settings
   </ChangeLog>
 	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon, buymeacoffee, kofi, crowdin, gitlab-->
 	<ExternalLink Type="github" Url="https://github.com/HomeOnMars/LaClock" />
