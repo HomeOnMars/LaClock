@@ -81,7 +81,7 @@ Note: You can also surround parts with double asterisks to make them **\*\*bold\
 
             UpdateLocaleDictionaryEntries(localeEntries, m_Setting);
 
-            Mod.log.Info($"{nameof(localeEntries)} updated.");
+            Mod.log.Info($"{nameof(LocaleEN)}: {nameof(localeEntries)} updated.");
 
             return localeEntries;
         }

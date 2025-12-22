@@ -4,6 +4,10 @@ ChangeLog
 LaClock ChangeLog
 -------------------------------------------------------------------------------
 
+### v1.4.2 <-- v1.4.1 | `2025-12-22`
+
+- Streamline mod initialization and logging (no functional changes)
+
 ### v1.4.1 <-- v1.4.0 | `2025-12-20`
 
 - Can now pick clock datetime format localization to follow system (default) or follow game
