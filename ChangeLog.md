@@ -4,6 +4,10 @@ ChangeLog
 LaClock ChangeLog
 -------------------------------------------------------------------------------
 
+### v1.4.3 <-- v1.4.2 | `2026-06-23`
+
+- Version bump
+
 ### v1.4.2 <-- v1.4.1 | `2025-12-22`
 
 - Add a preview for custom clock formatting in the settings

@@ -23,8 +23,8 @@ LaClock Mod Info
 - Customizable display format
 - Clock width adjustable in settings
 - Option to making the clock blink every hour (require enabling in the settings)
-- Localizations included (require [I18n Everywhere](https://mods.paradoxplaza.com/mods/75426/Windows) Mod).
-  Translated with much help from machine translation.
+- Localizations included (require [I18n Everywhere](https://mods.paradoxplaza.com/mods/75426/Windows) Mod)
+  with machine translation.
 
 ### Motivation
 
